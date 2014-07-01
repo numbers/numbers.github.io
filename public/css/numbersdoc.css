@@ -1,0 +1,72 @@
+/*
+===============
+=general stuff
+===============
+*/
+body { background-color: #ECF0F1; }
+a { color: #3498DB; }
+.centering {
+	margin: 0 auto;
+	text-align: center;
+}
+#container {
+	margin-top: -20px;
+}
+
+/*
+===============
+=sidebar
+===============
+*/
+#sidebar {
+	top: 0;
+	bottom: 0;
+	float: left;
+	width: 18%;
+}
+#sidebar ul { padding: 0 0 0 15px; }
+#sidebar li {
+    list-style-type:none;
+    margin: 0;
+    text-align: center;
+}
+
+/*
+===============
+=content
+===============
+*/
+#api {
+	width: 80%;
+	float: right;
+}
+.api-cont { width: 98%; }
+.api-func { border-bottom: 1px solid black; }
+.api-func table { margin-left: 25px; }
+.api-cont h5 { background-color: #9B59B6; }
+.api-func h6 {
+	background-color: #3498DB;
+	margin-top: 20px;
+}
+.api-cont h5, .api-func h6 {
+	border-radius: 4px;
+	padding: 4px;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0 5px;
+	margin-bottom: 15px;
+}
+th {
+	padding-right: 25px;
+	vertical-align: top;
+}
+td p { margin-bottom: 0; }
+td ul { padding-left: 30px; }
+.desc { padding: 0 0 0 20px; }
+span.lit {
+	font-family: 'Lucida Console', monospace;
+	font-size: 16px;
+	padding-left: 2px;
+	background-color: #BDC3C7;
+}
