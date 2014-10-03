@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    block title
+      title numbers.js: JavaScript's most popular math library
+    script(type='text/javascript', src='/js/jquery.min.js')
+    script(type='text/javascript', src='/js/bootstrap.min.js')
+    link(type='text/css', rel='stylesheet', href='/css/bootstrap.min.css')
+    block cssfile
+      link(type='text/css', rel='stylesheet', href='/css/indexNew.css')
+
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      div.container-fluid
+        // Brand and toggle get grouped for better mobile display 
+        div.navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+          a.navbar-brand(href='#') numbers.js
+        // Collect the nav links, forms, and other content for toggling 
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            block activeTab
+              li.active
+                a(href='/')
+                  | Home 
+                  span.glyphicon.glyphicon-home
+              //- li: a(href='#') Download
+              li: a(href='/examples') Examples
+              li.dropdown
+                a.dropdown-toggle(data-toggle='dropdown')
+                  | Documentation 
+                  span.caret
+                ul.dropdown-menu(role='menu')
+                  li: a(href='/basic') basic
+                  li: a(href='/calculus') calculus
+                  li: a(href='/complex') complex
+                  li: a(href='/dsp') dsp
+                  li: a(href='/generate') generate
+                  li: a(href='/matrix') matrix
+                  li: a(href='/prime') prime
+                  li: a(href='/random') random
+                  li: a(href='/statistic') statistic
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='https://github.com/sjkaliski/numbers.js') numbers.js on GitHub
+            li
+              a(href='https://github.com/stdako/numbersdoc') documentation on GitHub
+        //.navbar-collapse 
+      //.container-fluid 
+    block content

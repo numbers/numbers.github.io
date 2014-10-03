@@ -1,0 +1,2069 @@
+{
+  "basic": {
+    "binomial": {
+      "funcName": "binomial", 
+      "funcDesc": "Calculates the binomial coefficient of <i>n</i>,<i>k</i> (<i>n</i> choose <i>k</i>).", 
+      "paramNames": [
+        "n", 
+        "k"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "Number of available choices.", 
+        "Number of choices selected."
+      ], 
+      "returnName": "num", 
+      "returnType": "Int", 
+      "returnDesc": "The number of combinations of choices, <i>n</i> choose <i>k</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "divMod": {
+      "funcName": "divMod", 
+      "funcDesc": "Calculates the divisor (quotient) and modulus (remainder) amongst two integers <i>a,b</i>.", 
+      "paramNames": [
+        "a", 
+        "b"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "First integer.", 
+        "Second integer."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array whose first element is the divisor (<i>a</i>/<i>b</i>) and second element is the modulus (<i>a</i>%<i>b</i>). Returns false if <i>a</i> or <i>b</i> is not an integer.", 
+      "errors": "This function does not raise any errors (although it should)."
+    }, 
+    "egcd": {
+      "funcName": "egcd", 
+      "funcDesc": "Performs the extended Euclidean algorithm (calculates x,y such that ax + by = gcd(a,b) ).", 
+      "paramNames": [
+        "a", 
+        "b"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "First integer.", 
+        "Second integer."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array whose first element is gcd(a,b), second element is x, and third element is y such that ax + by = gcd(a,b) is satisfied.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "factorial": {
+      "funcName": "factorial", 
+      "funcDesc": "Calculates the factorial of a positive integer, <i>n</i>.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "A positive integer."
+      ], 
+      "returnName": "num", 
+      "returnType": "Int", 
+      "returnDesc": "Factorial of <i>n</i>", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "fallingFactorial": {
+      "funcName": "fallingFactorial", 
+      "funcDesc": "Calculates the falling factorial of a positive integer <i>n</i> with <i>k</i> steps: n!/(n-k)!", 
+      "paramNames": [
+        "n", 
+        "k"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "A positive integer.", 
+        "The number of steps to fall."
+      ], 
+      "returnName": "r", 
+      "returnType": "Int", 
+      "returnDesc": "Falling factorial of <i>n</i> with <i>k</i> steps. If <span class=\"lit\">k &gt; n</span> then 0 is returned.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "gcd": {
+      "funcName": "gcd", 
+      "funcDesc": "Calculates the greatest common divisor (gcd) amongst two integers.", 
+      "paramNames": [
+        "a", 
+        "b"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "First integer.", 
+        "Second integer."
+      ], 
+      "returnName": "num", 
+      "returnType": "Int", 
+      "returnDesc": "The gcd of <i>a,b</i>. If <i>a</i> or <i>b</i> are Infinity or -Infinity, then Infinity is returned. If <i>a</i> or <i>b</i> are not numbers, then NaN is returned.", 
+      "errors": [
+        "<i>a</i> or <i>b</i> is not an integer."
+      ]
+    }, 
+    "isInt": {
+      "funcName": "isInt", 
+      "funcDesc": "Determines if a number is an integer.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Number"
+      ], 
+      "paramDescs": [
+        "A number."
+      ], 
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>n</i> is an integer, false otherwise.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "lcm": {
+      "funcName": "lcm", 
+      "funcDesc": "Calculates the lowest common multiple (lcm) amongst two integers.", 
+      "paramNames": [
+        "a", 
+        "b"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "First integer.", 
+        "Second integer."
+      ], 
+      "returnName": "num", 
+      "returnType": "Int", 
+      "returnDesc": "The lcm of <i>a,b</i>. If <i>a</i> or <i>b</i> are Infinity or -Infinity, then <span class=\"lit\">0</span> is returned. If <i>a</i> or <i>b</i> are not numbers, then NaN is returned.", 
+      "errors": [
+        "<i>a</i> or <i>b</i> is not an integer."
+      ]
+    }, 
+    "max": {
+      "funcName": "max", 
+      "funcDesc": "Finds the maximum value in an array.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "An array of numbers."
+      ], 
+      "returnName": "num", 
+      "returnType": "Int", 
+      "returnDesc": "Maximum value inside <i>arr</i>. -Infinity is returned if <i>arr</i> is empty.", 
+      "errors": [
+        "<i>arr</i> is not an array."
+      ]
+    }, 
+    "min": {
+      "funcName": "min", 
+      "funcDesc": "Finds the minimum value in an array.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "An array of numbers."
+      ], 
+      "returnName": "numfct", 
+      "returnType": "Int", 
+      "returnDesc": "Minimum value inside <i>arr</i>. Infinity is returned if <i>arr</i> is empty.", 
+      "errors": [
+        "<i>arr</i> is not an array."
+      ]
+    }, 
+    "modInverse": {
+      "funcName": "modInverse", 
+      "funcDesc": "Calculates the modular multiplicative inverse <i>x</i> of an integer <i>a</i> and modulus <i>m</i>, ax = 1 (mod m).", 
+      "paramNames": [
+        "a", 
+        "m"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "An integer.", 
+        "Modulus."
+      ], 
+      "returnName": "x", 
+      "returnType": "Int", 
+      "returnDesc": "An integer such that ax = 1 (mod m).", 
+      "errors": [
+        "<i>x</i> cannot be calculated (i.e. no modular multiplicative inverse exists)."
+      ]
+    }, 
+    "numbersEqual": {
+      "funcName": "numbersEqual", 
+      "funcDesc": "Determines if two numbers, <i>a,b</i>, are equal within a given margin of precision, <i>epsilon</i>.", 
+      "paramNames": [
+        "a", 
+        "b", 
+        "epsilon"
+      ], 
+      "paramTypes": [
+        "Number", 
+        "Number", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "First number.", 
+        "Second number.", 
+        "Precision."
+      ], 
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if they are equal within the precision, false otherwise", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "powerMod": {
+      "funcName": "powerMod", 
+      "funcDesc": "Calculates the modulus of an exponential number, a^b mod m.", 
+      "paramNames": [
+        "a", 
+        "b", 
+        "m"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "Base.", 
+        "Exponent.", 
+        "Modulus."
+      ], 
+      "returnName": "num", 
+      "returnType": "Int", 
+      "returnDesc": "a^b mod m.", 
+      "errors": "This function does not raise any errors (although it should)."
+    }, 
+    "product": {
+      "funcName": "product", 
+      "funcDesc": "Calculates the product of the elements of an array.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "An array of numbers."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The product of the elements of <i>arr</i>.", 
+      "errors": [
+        "not all elements of <i>arr</i> are numbers", 
+        "<i>arr</i> is not an array"
+      ]
+    }, 
+    "random": {
+      "funcName": "random", 
+      "funcDesc": "Retrieves a specified quantity, <i>quant</i> of elements from an array, <i>arr</i> at random. If <i>allowDuplicates</i> is true, then the resulting array is allowed to duplicates of numbers.", 
+      "paramNames": [
+        "arr", 
+        "quant", 
+        "allowDuplicates"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Int", 
+        "Boolean"
+      ], 
+      "paramDescs": [
+        "Array of values to pick from.", 
+        "Number of values to retrieve.", 
+        "Allow numbers to be returned more than once."
+      ], 
+      "returnName": "randomArr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of randomly chosen numbers from <i>arr</i>.", 
+      "errors": [
+        "<i>arr</i> is empty", 
+        "<i>quant</i> is greater than the number of elements in <i>arr</i> and <i>allowDuplicates</i> is false"
+      ]
+    }, 
+    "range": {
+      "funcName": "range", 
+      "funcDesc": "Creates a range of numbers from <i>start</i> (inclusive) to <i>stop</i> (exclusive), increasing by <i>step</i> each iteration. All arguments optional.", 
+      "paramNames": [
+        "start", 
+        "stop", 
+        "step"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "Start of range (included). Default value is 0.", 
+        "End of range (excluded). Default value is the value of start.", 
+        "Increment size. Default value is 1."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of numbers. If no arguments are given, then [0] is returned.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "shuffle": {
+      "funcName": "shuffle", 
+      "funcDesc": "Shuffles the elements of an array in place.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "An array."
+      ], 
+      "returnName": "shuffledArr", 
+      "returnType": "Number", 
+      "returnDesc": "A shuffled version of <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "square": {
+      "funcName": "square", 
+      "funcDesc": "Calculates the square of a number.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Number"
+      ], 
+      "paramDescs": [
+        "A number."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "<i>n</i> squared.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "subtraction": {
+      "funcName": "subtraction", 
+      "funcDesc": "Calculates the differences of elements of an array, using the first element as the starting point.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "An array of numbers."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The difference of the elements of <i>arr</i>.", 
+      "errors": [
+        "not all elements of <i>arr</i> are numbers", 
+        "<i>arr</i> is not an array"
+      ]
+    }, 
+    "sum": {
+      "funcName": "sum", 
+      "funcDesc": "Calculates the sum of the elements of an array.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "An array of numbers."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The sum of the elements of <i>arr</i>.", 
+      "errors": [
+        "not all elements of <i>arr</i> are numbers", 
+        "<i>arr</i> is not an array"
+      ]
+    }
+  }, 
+  "complex": {
+    "add": {
+      "funcName": "add", 
+      "funcDesc": "Add <i>z</i> to this complex number.", 
+      "paramNames": [
+        "z"
+      ], 
+      "paramTypes": [
+        "Complex"
+      ], 
+      "paramDescs": [
+        "A complex number."
+      ], 
+      "returnName": "w", 
+      "returnType": "Complex", 
+      "returnDesc": "A new complex number.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "complexPow": {
+      "funcName": "complexPow", 
+      "funcDesc": "Raise this complex number to a complex number, <i>z</i>.", 
+      "paramNames": [
+        "z"
+      ], 
+      "paramTypes": [
+        "Complex"
+      ], 
+      "paramDescs": [
+        "Complex power of this complex number."
+      ], 
+      "returnName": "w", 
+      "returnType": "Complex", 
+      "returnDesc": "Raised complex number.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "conjugate": {
+      "funcName": "conjugate", 
+      "funcDesc": "Calculates the conjugate of this complex number.", 
+      "paramNames": [], 
+      "paramTypes": [], 
+      "paramDescs": [], 
+      "returnName": "z", 
+      "returnType": "Complex", 
+      "returnDesc": "The conjugate.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "cosine": {
+      "funcName": "cosine", 
+      "funcDesc": "Calculates the cosine of this complex number.", 
+      "paramNames": [], 
+      "paramTypes": [], 
+      "paramDescs": [], 
+      "returnName": "z", 
+      "returnType": "Complex", 
+      "returnDesc": "The cosine.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "divide": {
+      "funcName": "divide", 
+      "funcDesc": "Divide this complex number by <i>z</i>.", 
+      "paramNames": [
+        "z"
+      ], 
+      "paramTypes": [
+        "Complex"
+      ], 
+      "paramDescs": [
+        "A complex number."
+      ], 
+      "returnName": "w", 
+      "returnType": "Complex", 
+      "returnDesc": "A new complex number.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "equals": {
+      "funcName": "equals", 
+      "funcDesc": "Determines if this complex number and another complex number, <i>z</i>, are equal.", 
+      "paramNames": [
+        "z"
+      ], 
+      "paramTypes": [
+        "Complex"
+      ], 
+      "paramDescs": [
+        "A complex number."
+      ], 
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if this complex number and <i>z</i> are equal; false otherwise.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "magnitude": {
+      "funcName": "magnitude", 
+      "funcDesc": "Calculates the magnitude of this complex number.", 
+      "paramNames": [], 
+      "paramTypes": [], 
+      "paramDescs": [], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The magnitude.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "multiply": {
+      "funcName": "multiply", 
+      "funcDesc": "Multiply this complex number by <i>z</i>.", 
+      "paramNames": [
+        "z"
+      ], 
+      "paramTypes": [
+        "Complex"
+      ], 
+      "paramDescs": [
+        "A complex number."
+      ], 
+      "returnName": "w", 
+      "returnType": "Complex", 
+      "returnDesc": "A new complex number.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "phase": {
+      "funcName": "phase", 
+      "funcDesc": "Calculates the phase (angle from origin) of this complex number.", 
+      "paramNames": [], 
+      "paramTypes": [], 
+      "paramDescs": [], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The phase.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "pow": {
+      "funcName": "pow", 
+      "funcDesc": "Raise this complex number to the <i>n</i>th power.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Number"
+      ], 
+      "paramDescs": [
+        "Power of the complex number."
+      ], 
+      "returnName": "w", 
+      "returnType": "Complex", 
+      "returnDesc": "Raised complex number.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "roots": {
+      "funcName": "roots", 
+      "funcDesc": "Calculates all of the <i>n</i>th roots of this complex number.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Number"
+      ], 
+      "paramDescs": [
+        "The order of the roots of this complex number."
+      ], 
+      "returnName": "roots", 
+      "returnType": "Array", 
+      "returnDesc": "The <i>n</i>th roots of this complex number.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "sine": {
+      "funcName": "sine", 
+      "funcDesc": "Calculates the sine of this complex number.", 
+      "paramNames": [], 
+      "paramTypes": [], 
+      "paramDescs": [], 
+      "returnName": "z", 
+      "returnType": "Complex", 
+      "returnDesc": "The sine.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "subtract": {
+      "funcName": "subtract", 
+      "funcDesc": "Subtract <i>z</i> from this complex number.", 
+      "paramNames": [
+        "z"
+      ], 
+      "paramTypes": [
+        "Complex"
+      ], 
+      "paramDescs": [
+        "A complex number."
+      ], 
+      "returnName": "w", 
+      "returnType": "Complex", 
+      "returnDesc": "A new complex number.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "tan": {
+      "funcName": "tan", 
+      "funcDesc": "Calculates the tan of this complex number.", 
+      "paramNames": [], 
+      "paramTypes": [], 
+      "paramDescs": [], 
+      "returnName": "z", 
+      "returnType": "Complex", 
+      "returnDesc": "The tan.", 
+      "errors": "This function does not raise any errors."
+    }
+  }, 
+  "calculus": {
+    "adaptiveSimpson": {
+      "funcName": "adaptiveSimpson", 
+      "funcDesc": "Simpson's method of approximating the integral of a function, <i>f</i>, on the interval [<i>a</i>,<i>b</i>].", 
+      "paramNames": [
+        "f", 
+        "a", 
+        "b", 
+        "eps"
+      ], 
+      "paramTypes": [
+        "Function", 
+        "Number", 
+        "Number", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "The function to be evaluated.", 
+        "The left endpoint of the interval.", 
+        "The right endpoint of the interval.", 
+        "An error bound."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The approximation of the integral of <i>f</i> on [<i>a</i>,<i>b</i>].", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "LanczosGamma": {
+      "funcName": "LanczosGamma", 
+      "funcDesc": "Lanczos' approximation to the gamma function of a number, <i>n</i>.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Number"
+      ], 
+      "paramDescs": [
+        "A number."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "Gamma of <i>n</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "limit": {
+      "funcName": "limit", 
+      "funcDesc": "Calculates the limit of a function, <i>f</i>, at a point <i>x</i>. The point can be approached from the left, right, or middle (a combination of the left and right).", 
+      "paramNames": [
+        "f", 
+        "x", 
+        "approach"
+      ], 
+      "paramTypes": [
+        "Function", 
+        "Number", 
+        "String"
+      ], 
+      "paramDescs": [
+        "The function to be evaluated.", 
+        "The point for which the limit will be calculated.", 
+        "A desired approach. left, right and middle are the possible approaches."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The limit of <i>f</i> at <i>x</i>.", 
+      "errors": [
+        "an approach is not given"
+      ]
+    }, 
+    "MonteCarlo": {
+      "funcName": "MonteCarlo", 
+      "funcDesc": "The Monte-Carlo method for approximating the integral of a singlevariate or multivariate function, <i>f</i>, over a given interval(s). The number of intervals must match the number of variables of the function. The nth element of I is the interval for the nth variable of the function.", 
+      "paramNames": [
+        "f", 
+        "N", 
+        "I"
+      ], 
+      "paramTypes": [
+        "Function", 
+        "Number", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "The function to be evaluated.", 
+        "The number of function evaluations.", 
+        "An array of arrays, where each inner array is an interval containing \n            the endpoints."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "An approximation to the integral of <i>f</i> with <i>N</i> function evaluations.", 
+      "errors": [
+        "there are no intervals given (<span class=\"lit\">L.length == 0</span>)", 
+        "N is not positive"
+      ]
+    }, 
+    "pointDiff": {
+      "funcName": "pointDiff", 
+      "funcDesc": "Calculates the point differential of a function <i>f</i> at a point <i>x</i>. Currently only supports one-dimensional functions.", 
+      "paramNames": [
+        "f", 
+        "x"
+      ], 
+      "paramTypes": [
+        "Function", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "The function to be evaluated.", 
+        "The point for which the point differential will be calculated."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The point differential of <i>f</i> at <i>x</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "Riemann": {
+      "funcName": "Riemann", 
+      "funcDesc": "Calculates the Riemann sum for a one-variable function <i>f</i> on the interval [<i>a</i>,<i>b</i>] with <i>n</i> equally-spaced divisons. If <i>sampler</i> is given, that function will be used to calculate which value to sample on each subinterval; otherwise, the left endpoint will be used.", 
+      "paramNames": [
+        "f", 
+        "a", 
+        "b", 
+        "n", 
+        "sampler"
+      ], 
+      "paramTypes": [
+        "Function", 
+        "Number", 
+        "Number", 
+        "Number", 
+        "Function, optional"
+      ], 
+      "paramDescs": [
+        "The function to be evaluated.", 
+        "The left endpoint of the interval.", 
+        "The right endpoint of the interval.", 
+        "The number of subintervals.", 
+        "A function that determines what value is to be used for sampling \n            on a subinterval."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The Riemann sum of <i>f</i> on [<i>a</i>,<i>b</i>] with <i>n</i> divisions.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "SimpsonDef": {
+      "funcName": "SimpsonDef", 
+      "funcDesc": "Simpson's method of approximating the integral of a function, <i>f</i>, on the interval [<i>a</i>,<i>b</i>].", 
+      "paramNames": [
+        "f", 
+        "a", 
+        "b"
+      ], 
+      "paramTypes": [
+        "Function", 
+        "Number", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "The function to be evaluated.", 
+        "The left endpoint of the interval.", 
+        "The right endpoint of the interval."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The approximation of the integral of <i>f</i> on [<i>a</i>,<i>b</i>].", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "SimpsonRecursive": {
+      "funcName": "SimpsonRecursive", 
+      "funcDesc": "The helper function used for adaptive Simpson's method of approximating the integral of a function, <i>f</i>, on the interval [<i>a</i>,<i>b</i>].", 
+      "paramNames": [
+        "f", 
+        "a", 
+        "b", 
+        "whole", 
+        "eps"
+      ], 
+      "paramTypes": [
+        "Function", 
+        "Number", 
+        "Number", 
+        "Number", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "The function to be evaluated.", 
+        "The left endpoint of the interval.", 
+        "The right endpoint of the interval.", 
+        "The value of the integral of f on [a,b] \n            (Simpson's approximation, in the caes of adaptiveSimpson).", 
+        "An error bound."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "A recursive evaluation of the left and right sides.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "StirlingGamma": {
+      "funcName": "StirlingGamma", 
+      "funcDesc": "Striling's approximation to the gamma function of a number, <i>n</i>.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Number"
+      ], 
+      "paramDescs": [
+        "A number."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "Gamma of <i>n</i>.", 
+      "errors": "This function does not raise any errors."
+    }
+  }, 
+  "dsp": {
+    "fft": {
+      "funcName": "fft", 
+      "funcDesc": "Calculates the Discrete Fourier Transform (DFT) of an array, <i>x</i> of real numbers, using a Fast Fourier Transform (FFT) algorithm.", 
+      "paramNames": [
+        "x"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "An array of real numbers."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of complex numbers, the DFT of the elements of <i>x</i>.", 
+      "errors": [
+        "the number of elements in <i>x</i> is not a power of 2."
+      ]
+    }, 
+    "segment": {
+      "funcName": "segment", 
+      "funcDesc": "Creates an array composed of elements from <i>arr</i>, starting at the <i>start</i>-th element of arr, and incrementing by <i>step</i>.", 
+      "paramNames": [
+        "arr", 
+        "start", 
+        "step"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "An array.", 
+        "The initial index.", 
+        "The increment size."
+      ], 
+      "returnName": "segArr", 
+      "returnType": "Array", 
+      "returnDesc": "A new array consisting of elements from <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }
+  }, 
+  "generate": {
+    "collatz": {
+      "funcName": "collatz", 
+      "funcDesc": "Populates a given array, <i>arr</i>, with a Collatz sequence, starting the sequence at the positive integer <i>n</i>.", 
+      "paramNames": [
+        "n", 
+        "arr"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "Starting point.", 
+        "An array."
+      ], 
+      "returnName": "colArr", 
+      "returnType": "Array", 
+      "returnDesc": "<i>arr</i> populated with the Collatz sequence.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "fibonacci": {
+      "funcName": "fibonacci", 
+      "funcDesc": "Calculates the <i>n</i>th Fibonacci number.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "Desired Fibonacci number to calculate."
+      ], 
+      "returnName": "num", 
+      "returnType": "Int", 
+      "returnDesc": "<i>n</i>th Fibonacci number.", 
+      "errors": "This function does not raise any errors."
+    }
+  }, 
+  "matrix": {
+    "addition": {
+      "funcName": "addition", 
+      "funcDesc": "Add two matrices, <i>M1</i> and <i>M2</i>, together.", 
+      "paramNames": [
+        "M1", 
+        "M2"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "First matrix.", 
+        "Second matrix."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": "Addition of <i>M1</i>, <i>M2</i>.", 
+      "errors": [
+        "the dimensions of <i>M1</i> and <i>M2</i> do not match"
+      ]
+    }, 
+    "affine": {
+      "funcName": "affine", 
+      "funcDesc": "Perform an affine transformation 2D vector, <i>v</i>, by factors <i>tx</i> and <i>ty</i>.", 
+      "paramNames": [
+        "v", 
+        "tx", 
+        "ty"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Number", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "A 2D vector.", 
+        "The x-factor.", 
+        "The y-factor."
+      ], 
+      "returnName": "Vaff", 
+      "returnType": "Array", 
+      "returnDesc": "Affined <i>v</i>.", 
+      "errors": [
+        "<i>v</i> is not 2D (<span class=\"lit\">v.length !== 2</span>)"
+      ]
+    }, 
+    "deepCopy": {
+      "funcName": "deepCopy", 
+      "funcDesc": "Create a deep copy of a matrix, <i>M</i>.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to copy."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Deep copy of <i>M</i>.", 
+      "errors": [
+        "<i>M</i> is not a matrix"
+      ]
+    }, 
+    "determinant": {
+      "funcName": "determinant", 
+      "funcDesc": "Calculates the determinant of a square matrix, <i>M</i>.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A square matrix."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The determinant of <i>M</i>.", 
+      "errors": [
+        "<i>M</i> is not a square matrix"
+      ]
+    }, 
+    "dotproduct": {
+      "funcName": "dotproduct", 
+      "funcDesc": "Calculate the dot product of two vectors, <i>vA</i> and <i>vB</i>.", 
+      "paramNames": [
+        "vA", 
+        "vB"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "First vector.", 
+        "Second vector."
+      ], 
+      "returnName": "num", 
+      "returnType": "Array", 
+      "returnDesc": "Dot product of <i>vA</i>,<i>vB</i>.", 
+      "errors": [
+        "The dimensions of <i>vA</i> and <i>vB</i> are not the same \n              (<span class=\"lit\">vA.length !== vB.length</span>)."
+      ]
+    }, 
+    "GaussJordanEliminate": {
+      "funcName": "GaussJordanEliminate", 
+      "funcDesc": "Performs Gauss-Jordan elimination on the matrix <i>M</i> with an error bound of <i>eps</i>. <i>eps</i> is an optional argument.", 
+      "paramNames": [
+        "M", 
+        "eps"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "A matrix.", 
+        "The error bound."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "The row-reduced version of <i>M</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "getCol": {
+      "funcName": "getCol", 
+      "funcDesc": "Gets the <i>n</i>th column of a matrix, <i>M</i> as a vector.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A matrix."
+      ], 
+      "returnName": "col", 
+      "returnType": "Array", 
+      "returnDesc": "<i>n</i>th column of <i>M</i>.", 
+      "errors": [
+        "<i>n</i> is less than zero", 
+        "<i>n</i> is greater than or equal to the number of columns of <i>M</i>"
+      ]
+    }, 
+    "identity": {
+      "funcName": "identity", 
+      "funcDesc": "Creates a <i>n</i>-by-<i>n</i> identity matrix.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "The size of the identity matrix."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": "Identity matrix of size <i>n</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "inverse": {
+      "funcName": "inverse", 
+      "funcDesc": "Calculates the inverse of a square matrix <i>M</i>.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A square matrix."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "The inverse of <i>M</i>.", 
+      "errors": [
+        "<i>M</i> is not a square matrix."
+      ]
+    }, 
+    "isSquare": {
+      "funcName": "isSquare", 
+      "funcDesc": "Determines if a matrix, <i>M</i>, is square.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to test."
+      ], 
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>M</i> is square, false otherwise.", 
+      "errors": [
+        "<i>M</i> is not a matrix."
+      ]
+    }, 
+    "lupDecomposition": {
+      "funcName": "lupDecomposition", 
+      "funcDesc": "Calculates the LUP decomposition of a square matrix, <i>M</i>. An array containing the three matrices is returned.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A square matrix."
+      ], 
+      "returnName": "LUP", 
+      "returnType": "Array", 
+      "returnDesc": "An array containing <i>L</i>, <i>U</i>, <i>P</i>.", 
+      "errors": [
+        "<i>M</i> is not a square matrix."
+      ]
+    }, 
+    "multiply": {
+      "funcName": "multiply", 
+      "funcDesc": "Multiply two matrices, <i>M1</i> and <i>M2</i>, together.", 
+      "paramNames": [
+        "M1", 
+        "M2"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "First matrix.", 
+        "Second matrix."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": "Multiplication of <i>M1</i>, <i>M2</i>.", 
+      "errors": [
+        "The number of rows of <i>M1</i> and the number of columns of \n              <i>M2</i> do not match."
+      ]
+    }, 
+    "outer": {
+      "funcName": "outer", 
+      "funcDesc": "Calculate the outer product of two vectors, <i>vA</i> and <i>vB</i>.", 
+      "paramNames": [
+        "vA", 
+        "vB"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "First vector.", 
+        "Second vector."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": "Outer product of <i>vA</i>,<i>vB</i>.", 
+      "errors": [
+        "The dimensions of <i>vA</i> and <i>vB</i> are not the same \n              (<span class=\"lit\">vA.length !== vB.length</span>)."
+      ]
+    }, 
+    "reorderCols": {
+      "funcName": "reorderCols", 
+      "funcDesc": "Reorders the columns of a matrix <i>M</i> as specified by a set of column indices, <i>L</i>.", 
+      "paramNames": [
+        "M", 
+        "L"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to reorder.", 
+        "The set of column indices."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Reordered <i>M</i>.", 
+      "errors": [
+        "<i>L</i> is not defined", 
+        "the number of columns in <i>Mreorder</i> will have a different \n              number of columns as <i>M</i> (<span class=\"lit\">L.length !== M.length</span>).", 
+        "an element of <i>L</i> is less than zero or greater than or equal \n              to the number of columns of <i>M</i>"
+      ]
+    }, 
+    "reorderRows": {
+      "funcName": "reorderRows", 
+      "funcDesc": "Reorders the rows of a matrix <i>M</i> as specified by a set of integers, <i>L</i>.", 
+      "paramNames": [
+        "M", 
+        "L"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to reorder.", 
+        "The set of row indices."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Reordered <i>M</i>.", 
+      "errors": [
+        "<i>L</i> is not defined", 
+        "the number of rows in <i>Mreorder</i> will have a different \n              number of rows as <i>M</i> (<span class=\"lit\">L.length !== M.length</span>).", 
+        "an element of <i>L</i> is less than zero or greater than or equal \n              to the number of rows of <i>M</i>"
+      ]
+    }, 
+    "reverseCols": {
+      "funcName": "reverseCols", 
+      "funcDesc": "Reverses the order the of columns of a matrix <i>M</i>.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to reverse."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Reversed <i>M</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "reverseRows": {
+      "funcName": "reverseRows", 
+      "funcDesc": "Reverses the order the of rows of a matrix <i>M</i>.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to reverse."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Reversed <i>M</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "rotate": {
+      "funcName": "rotate", 
+      "funcDesc": "Rotate a 2D vector, <i>v</i>, by <i>angle</i> degrees in a direction <i>dir</i>. <i>dir</i> is an optional argument.", 
+      "paramNames": [
+        "v", 
+        "angle", 
+        "dir"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Number", 
+        "String"
+      ], 
+      "paramDescs": [
+        "A 2D vector.", 
+        "An angle in degrees.", 
+        "A direction. Options are clockwise and counterclockwise. \n            Default value is counterclockwise."
+      ], 
+      "returnName": "Vnew", 
+      "returnType": "Array", 
+      "returnDesc": "Rotated <i>v</i>.", 
+      "errors": [
+        "<i>v</i> is not 2D (<span class=\"lit\">v.length !== 2</span>)."
+      ]
+    }, 
+    "rowAddMultiple": {
+      "funcName": "rowAddMultiple", 
+      "funcDesc": "Add the multiple of a row, <i>scale</i>*<i>fromRow</i>, to another row, <i>toRow</i>, both of matrix <i>M</i>.", 
+      "paramNames": [
+        "M", 
+        "fromRow", 
+        "toRow", 
+        "scale"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Int", 
+        "Int", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "A matrix.", 
+        "Row to be multiplied.", 
+        "Row to be added to.", 
+        "Scaling factor."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Altered <i>M</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "rowReduce": {
+      "funcName": "rowReduce", 
+      "funcDesc": "Row-reduces the matrix <i>M</i> with an error bound of <i>eps</i>. <i>eps</i> is an optional argument. Identical to <a href=\"#GaussJordanElimination\">matrix.GaussJordanElimination</a>.", 
+      "paramNames": [
+        "M", 
+        "eps"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "A matrix.", 
+        "The error bound."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "The row-reduced version of <i>M</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "rowScale": {
+      "funcName": "rowScale", 
+      "funcDesc": "Scale row <i>row</i> of a matrix <i>M</i> by a factor <i>k</i>.", 
+      "paramNames": [
+        "M", 
+        "row", 
+        "k"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Int", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "A matrix.", 
+        "The row number.", 
+        "Scaling factor."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Scaled <i>M</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "rowSwitch": {
+      "funcName": "rowSwitch", 
+      "funcDesc": "Switch rows <i>row1</i> and <i>row2</i> of a matrix <i>M</i> with each other.", 
+      "paramNames": [
+        "M", 
+        "row1", 
+        "row2"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "A matrix.", 
+        "First row number.", 
+        "Second row number."
+      ], 
+      "returnName": "Mnew", 
+      "returnType": "Array", 
+      "returnDesc": "Swapped <i>M</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "scalar": {
+      "funcName": "scalar", 
+      "funcDesc": "Multiply a matrix, <i>M</i>, by a scalar, <i>a</i>.", 
+      "paramNames": [
+        "M", 
+        "a"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "The matrix to multiply.", 
+        "The scalar value."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": "Multiplication of <i>a</i>, <i>M1</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "scale": {
+      "funcName": "scale", 
+      "funcDesc": "Scale a 2D vector, <i>v</i>, by scale factors <i>x</i> and <i>y</i>.", 
+      "paramNames": [
+        "v", 
+        "x", 
+        "y"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Number", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "A 2D vector.", 
+        "The x-scaling.", 
+        "The y-scaling."
+      ], 
+      "returnName": "Vsca", 
+      "returnType": "Array", 
+      "returnDesc": "Scaled <i>v</i>.", 
+      "errors": [
+        "<i>v</i> is not 2D (<span class=\"lit\">v.length !== 2</span>)."
+      ]
+    }, 
+    "shear": {
+      "funcName": "shear", 
+      "funcDesc": "Shear a 2D vector, <i>v</i>, by a shear factor <i>k</i> in a direction (x or y) <i>dir</i>.", 
+      "paramNames": [
+        "v", 
+        "k", 
+        "dir"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Number", 
+        "String"
+      ], 
+      "paramDescs": [
+        "A 2D vector.", 
+        "The shear factor.", 
+        "A direction. Options are 'xaxis' and 'yaxis'."
+      ], 
+      "returnName": "Vsh", 
+      "returnType": "Array", 
+      "returnDesc": "Sheared <i>v</i>.", 
+      "errors": [
+        "<i>v</i> is not 2D (<span class=\"lit\">v.length !== 2</span>)."
+      ]
+    }, 
+    "trace": {
+      "funcName": "trace", 
+      "funcDesc": "Calculates the trace of a square matrix, <i>M</i>.", 
+      "paramNames": [
+        "M"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A square matrix."
+      ], 
+      "returnName": "tr", 
+      "returnType": "Number", 
+      "returnDesc": "The trace of <i>M</i>.", 
+      "errors": [
+        "<i>M</i> is not a square matrix."
+      ]
+    }, 
+    "zeros": {
+      "funcName": "zeros", 
+      "funcDesc": "Creates a <i>n</i>-by-<i>m</i> matrix filled with zeros.", 
+      "paramNames": [
+        "n", 
+        "m"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "Number of rows.", 
+        "Number of columns."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": ".", 
+      "errors": [
+        "Either matrix dimension is less than 1."
+      ]
+    }, 
+    "zigzag": {
+      "funcName": "zigzag", 
+      "funcDesc": "Creates a <i>n</i>-by-<i>n</i> zigzag matrix starting at a corner, <i>point</i>, and moving in an initial direction <i>dir</i>.", 
+      "paramNames": [
+        "n", 
+        "point", 
+        "dir"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "String", 
+        "String"
+      ], 
+      "paramDescs": [
+        "Dimension of zigzag matrix.", 
+        "Corner to start at. Options are top-left ('TR'), top-right ('TR'), \n            bottom-left ('BL') and bottom-right ('BR').", 
+        "Direction to start iterating. Options are vertical ('v') or \n            horizontal ('H')."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": "A zigzag matrix.", 
+      "errors": [
+        "Matrix dimension is less than 2."
+      ]
+    }
+  }, 
+  "prime": {
+    "coprime": {
+      "funcName": "coprime", 
+      "funcDesc": "Determine if two integers are coprime.", 
+      "paramNames": [
+        "a", 
+        "b"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "First integer.", 
+        "Second integer"
+      ], 
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>a</i>, <i>b</i> are coprime, false otherwise.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "factorization": {
+      "funcName": "factorization", 
+      "funcDesc": "Factors an integer, <i>n</i>, into its prime factors and puts them into an array.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "The number to factor."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "The prime factors of <i>n</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "getPerfectPower": {
+      "funcName": "getPerfectPower", 
+      "funcDesc": "Determines if an integer, <i>n</i>, is a perfect power. It should be noted that this does not find the minimum value of k where m^k = n for some m.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "The number to test."
+      ], 
+      "returnName": "arr/bool", 
+      "returnType": "Array/Boolean", 
+      "returnDesc": "Returns <span class=\"lit\">[m,k]</span> if <i>n</i> is a perfect power, returns false otherwise.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "getPrimePower": {
+      "funcName": "getPrimePower", 
+      "funcDesc": "Determines if an integer, <i>n</i>, is a prime power (n = p^m). The prime and the power are returned if so.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "The number to test."
+      ], 
+      "returnName": "arr/bool", 
+      "returnType": "Array/Boolean", 
+      "returnDesc": "Returns <span class=\"lit\">[p,m]</span> if <i>n</i> is a perfect power, returns false otherwise.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "millerRabin": {
+      "funcName": "millerRabin", 
+      "funcDesc": "Determines if an integer, <i>n</i>, is prime in polynomial time using the Miller-Rabin primality test, with an accuracy rate (number of trials) <i>k</i>.", 
+      "paramNames": [
+        "n", 
+        "k"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "The number to test for primality.", 
+        "The accuracy rate."
+      ], 
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>n</i> is prime, false otherwise.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "sieve": {
+      "funcName": "sieve", 
+      "funcDesc": "Creates an array of prime numbers from 2 to <i>n</i>, inclusive.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "The largest prime number to be returned."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of primes from 2 to <i>n</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "simple": {
+      "funcName": "simple", 
+      "funcDesc": "Determines if an integer, <i>n</i>, is prime using brute force.", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "The number to test for primality."
+      ], 
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>n</i> is prime, false otherwise.", 
+      "errors": "This function does not raise any errors."
+    }
+  }, 
+  "random": {
+    "bates": {
+      "funcName": "bates", 
+      "funcDesc": "Generates a random number according to a Bates distribution inside the interval [<i>a</i>,<i>b</i>]. Both arguments are optional.", 
+      "paramNames": [
+        "n", 
+        "b", 
+        "a"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Number, optional", 
+        "Number, optional"
+      ], 
+      "paramDescs": [
+        "Number of times to sum.", 
+        "Right endpoint of interval. Default value is 1.", 
+        "Left endpoint of the interal. Default value is 0."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "Random number according to a Bates distribution on [<i>a</i>,<i>b</i>].", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "boxMullerTransform": {
+      "funcName": "boxMullerTransform", 
+      "funcDesc": "Generates a pair of indepedent pseudo-random numbers from a normal distribution with mean <i>mu</i> and standard deviation <i>sigma</i>. Both arguments are optional.", 
+      "paramNames": [
+        "mu", 
+        "sigma"
+      ], 
+      "paramTypes": [
+        "Number, optional", 
+        "Number, optional"
+      ], 
+      "paramDescs": [
+        "Mean. Default value is 1.", 
+        "Standard deviation. Default value is 0."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "A pair of random numbers according to a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "distribution.bates": {
+      "funcName": "distribution.bates", 
+      "funcDesc": "Creates an array of <i>n</i> random numbers according to an Bates distribution inside the interval [<i>a</i>,<i>b</i>]. <i>a</i> and <i>b</i> are optional arguments.", 
+      "paramNames": [
+        "n", 
+        "b", 
+        "a"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Number, optional", 
+        "Number, optional"
+      ], 
+      "paramDescs": [
+        "Amount of random numbers to generate.", 
+        "Right endpoint of interval. Default value is n.", 
+        "Left endpoint of interval. Default value is 0."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of <i>n</i> random numbers from a Bates distribution on [<i>a</i>,<i>b</i>].", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "distribution.boxMuller": {
+      "funcName": "distribution.boxMuller", 
+      "funcDesc": "Creates an array of <i>n</i> random numbers according to the Box-Muller transform with a mean <i>mu</i> and standard deviation <i>sigma</i>. <i>ru</i> determines if the returned value will be in polar coordinates. <i>mu</i>, <i>sigma</i> and <i>rc</i> are optional arguments.", 
+      "paramNames": [
+        "n", 
+        "mu", 
+        "sigma", 
+        "rc"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Number, optional", 
+        "Number, optional", 
+        "Boolean, optional"
+      ], 
+      "paramDescs": [
+        "Amount of random numbers to generate.", 
+        "Mean. Default value is 1.", 
+        "Standard deviation. Default value is 0.", 
+        "Determine if returned values should be in polar coordinates (true) or not \n            (false). Default value is false."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of <i>n</i> random numbers from a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "distribution.irwinHall": {
+      "funcName": "distribution.irwinHall", 
+      "funcDesc": "Creates an array of <i>n</i> random numbers according to an Irwin-Hall distribution with a maximum sum value of <i>m</i> and a subtraction value of <i>sub</i>. <i>mu</i> and <i>sub</i> are optional arguments.", 
+      "paramNames": [
+        "n", 
+        "m", 
+        "sub"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Number, optional", 
+        "Number, optional"
+      ], 
+      "paramDescs": [
+        "Amount of random numbers to generate.", 
+        "Maximum sum value. Default value is n.", 
+        "Number to subtract. Default value is 0."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of <i>n</i> random numbers from a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "distribution.irwinHallNormal": {
+      "funcName": "distribution.irwinHallNormal", 
+      "funcDesc": "Creates an array of <i>n</i> random numbers (approximately) according to a normal distribution with bounds (-6, 6).", 
+      "paramNames": [
+        "n"
+      ], 
+      "paramTypes": [
+        "Int"
+      ], 
+      "paramDescs": [
+        "Amount of random numbers to generate."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of <i>n</i> random numbers from a normal distribution with bounds (-6,6).", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "distribution.logNormal": {
+      "funcName": "distribution.logNormal", 
+      "funcDesc": "Creates an array of <i>n</i> random numbers according to a log-normal distribution with a mean <i>mu</i> and standard deviation <i>sigma</i>. <i>mu</i> and <i>sigma</i> are optional arguments.", 
+      "paramNames": [
+        "n", 
+        "mu", 
+        "sigma"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Number, optional", 
+        "Number, optional"
+      ], 
+      "paramDescs": [
+        "Amount of random numbers to generate.", 
+        "Mean. Default value is 1.", 
+        "Standard deviation. Default value is 0."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of <i>n</i> random numbers from a log-normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "distribution.normal": {
+      "funcName": "distribution.normal", 
+      "funcDesc": "Creates an array of <i>n</i> random numbers according to a normal distribution with a mean <i>mu</i> and standard deviation <i>sigma</i>. <i>mu</i> and <i>sigma</i> are optional arguments.", 
+      "paramNames": [
+        "n", 
+        "mu", 
+        "sigma"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Number, optional", 
+        "Number, optional"
+      ], 
+      "paramDescs": [
+        "Amount of random numbers to generate.", 
+        "Mean. Default value is 1.", 
+        "Standard deviation. Default value is 0."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of <i>n</i> random numbers from a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "irwinHall": {
+      "funcName": "irwinHall", 
+      "funcDesc": "Generates a random number according to an Irwin-Hall distribution, given a maximum sum, <i>n</i>, and a number to subtract, <i>sub</i>.", 
+      "paramNames": [
+        "n", 
+        "sub"
+      ], 
+      "paramTypes": [
+        "Number", 
+        "Number"
+      ], 
+      "paramDescs": [
+        "Maximum sum.", 
+        "Number to subtract."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "Random number according to an Irwin-Hall distribution.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "sample": {
+      "funcName": "sample", 
+      "funcDesc": "Generates an array of <i>n</i> uniformly distributed random numbers inside the interval [<i>a</i>,<i>b</i>].", 
+      "paramNames": [
+        "a", 
+        "b", 
+        "n"
+      ], 
+      "paramTypes": [
+        "Int", 
+        "Int", 
+        "Int"
+      ], 
+      "paramDescs": [
+        "Left endpoint of interval.", 
+        "Right endpoint of interval.", 
+        "Amount of random numbers to generate."
+      ], 
+      "returnName": "arr", 
+      "returnType": "Array", 
+      "returnDesc": "An array of <i>n</i> random numbers inside [<i>a</i>,<i>b</i>].", 
+      "errors": "This function does not raise any errors."
+    }
+  }, 
+  "statistic": {
+    "correlation": {
+      "funcName": "correlation", 
+      "funcDesc": "Calculates the correlation between two sets of values, <i>arr1</i> and <i>arr2</i>.", 
+      "paramNames": [
+        "arr1", 
+        "arr2"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "First set of values.", 
+        "Second set of values."
+      ], 
+      "returnName": "cor", 
+      "returnType": "Number", 
+      "returnDesc": "The correlation between <i>arr1</i>, <i>arr2</i>.", 
+      "errors": [
+        "<i>arr1</i> and <i>arr2</i> do not have the same number of values"
+      ]
+    }, 
+    "covariance": {
+      "funcName": "covariance", 
+      "funcDesc": "Calculates the correlation between two sets of values, <i>arr1</i> and <i>arr2</i>.", 
+      "paramNames": [
+        "arr1", 
+        "arr2"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "First set of values.", 
+        "Second set of values."
+      ], 
+      "returnName": "covar", 
+      "returnType": "Number", 
+      "returnDesc": "The covariance of <i>arr1</i>, <i>arr2</i>", 
+      "errors": [
+        "<i>arr1</i> and <i>arr2</i> do not have the same number of values"
+      ]
+    }, 
+    "exponentialRegression": {
+      "funcName": "exponentialRegression", 
+      "funcDesc": "Creates a function to calculate the exponential regression of a set of values, <i>arrY</i>.", 
+      "paramNames": [
+        "arrY"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of values."
+      ], 
+      "returnName": "expReg", 
+      "returnType": "Function", 
+      "returnDesc": "A function that takes a value or an array of values and calculates the corresponding exponential regression values.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "linearRegression": {
+      "funcName": "linearRegression", 
+      "funcDesc": "Creates a function to calculate the linear regression of a dataset, corresponding to x-values (<i>arrX</i>) and y-values (<i>arrY</i>).", 
+      "paramNames": [
+        "arrX", 
+        "arrY"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of x-values.", 
+        "A set of y-values."
+      ], 
+      "returnName": "linReg", 
+      "returnType": "Function", 
+      "returnDesc": "A function that takes a value or an array of values and calculates the corresponding linear regression values.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "mean": {
+      "funcName": "mean", 
+      "funcDesc": "Calculates the mean of a set of values, <i>arr</i>.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of values."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The mean of <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "median": {
+      "funcName": "median", 
+      "funcDesc": "Calculates the median of a set of values, <i>arr</i>.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of values."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The median of <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "mode": {
+      "funcName": "mode", 
+      "funcDesc": "Calculates the mode of a set of values, <i>arr</i>.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of values."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The mode of <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "quantile": {
+      "funcName": "quantile", 
+      "funcDesc": "Calculates the <i>k</i>th <i>q</i>-quantile of a set of values, <i>arr</i>.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of values."
+      ], 
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "The median of <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "report": {
+      "funcName": "report", 
+      "funcDesc": "Creates a set of summary statistics of a set of values, <i>arr</i>. Calculates the mean, first quartile (mode), median, third quartile, and standard deviation.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of values."
+      ], 
+      "returnName": "obj", 
+      "returnType": "Object", 
+      "returnDesc": "An object containing the mean ('mean'), first quartile ('firstQuartile'), median ('median'), third quartile ('thirdQuartile'), and standard deviation ('standardDev') of <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "rSquared": {
+      "funcName": "rSquared", 
+      "funcDesc": "Calculates the coefficient of determination of a dataset, <i>source</i>, and a regression line, <i>regression</i>.", 
+      "paramNames": [
+        "source", 
+        "regression"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "Data points.", 
+        "Fitted points."
+      ], 
+      "returnName": "rSq", 
+      "returnType": "Number", 
+      "returnDesc": "The r-squared value of <i>source</i>, <i>regression</i>.<i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }, 
+    "standardDev": {
+      "funcName": "standardDev", 
+      "funcDesc": "Calculates the standard deviation of a set of values, <i>arr</i>.", 
+      "paramNames": [
+        "arr"
+      ], 
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "A set of values."
+      ], 
+      "returnName": "stddev", 
+      "returnType": "Number", 
+      "returnDesc": "The standard deviation of <i>arr</i>.", 
+      "errors": "This function does not raise any errors."
+    }
+  }
+}
