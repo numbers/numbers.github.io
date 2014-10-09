@@ -1092,7 +1092,47 @@
       "errors": [
         "<i>M</i> is not a square matrix."
       ]
-    }, 
+    },
+    "isColumnDD": {
+      "funcName": "isColumnDD",
+      "funcDesc": "Determines if a matrix, <i>M</i>, is (weak) column diagonally dominant.",
+      "paramNames": [
+        "M"
+      ],
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to test."
+      ],
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>M</i> is column diagonally dominant, false otherwise.", 
+      "errors": [
+        "<i>M</i> is not a matrix.",
+        "<i>M</i> is not square."
+      ]
+    },
+    "isRowDD": {
+      "funcName": "isRowDD",
+      "funcDesc": "Determines if a matrix, <i>M</i>, is (weak) row diagonally dominant.",
+      "paramNames": [
+        "M"
+      ],
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to test."
+      ],
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>M</i> is row diagonally dominant, false otherwise.", 
+      "errors": [
+        "<i>M</i> is not a matrix.",
+        "<i>M</i> is not square."
+      ]
+    },
     "isSquare": {
       "funcName": "isSquare", 
       "funcDesc": "Determines if a matrix, <i>M</i>, is square.", 
@@ -1111,7 +1151,47 @@
       "errors": [
         "<i>M</i> is not a matrix."
       ]
-    }, 
+    },
+    "isStrictlyColumnDD": {
+      "funcName": "isStrictlyColumnDD",
+      "funcDesc": "Determines if a matrix, <i>M</i>, is strictly column diagonally dominant.",
+      "paramNames": [
+        "M"
+      ],
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to test."
+      ],
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>M</i> is strictly column diagonally dominant, false otherwise.", 
+      "errors": [
+        "<i>M</i> is not a matrix.",
+        "<i>M</i> is not square."
+      ]
+    },
+    "isStrictlyRowDD": {
+      "funcName": "isStrictlyRowDD",
+      "funcDesc": "Determines if a matrix, <i>M</i>, is strictly row diagonally dominant.",
+      "paramNames": [
+        "M"
+      ],
+      "paramTypes": [
+        "Array"
+      ], 
+      "paramDescs": [
+        "The matrix to test."
+      ],
+      "returnName": "bool", 
+      "returnType": "Boolean", 
+      "returnDesc": "true if <i>M</i> is strictly row diagonally dominant, false otherwise.", 
+      "errors": [
+        "<i>M</i> is not a matrix.",
+        "<i>M</i> is not square."
+      ]
+    },
     "lupDecomposition": {
       "funcName": "lupDecomposition", 
       "funcDesc": "Calculates the LUP decomposition of a square matrix, <i>M</i>. An array containing the three matrices is returned.", 
@@ -1443,7 +1523,29 @@
       "errors": [
         "<i>v</i> is not 2D (<span class=\"lit\">v.length !== 2</span>)."
       ]
-    }, 
+    },
+    "subtraction": {
+      "funcName": "subtraction", 
+      "funcDesc": "Subtract two matrices, <i>M1</i> and <i>M2</i>, from one another.", 
+      "paramNames": [
+        "M1", 
+        "M2"
+      ], 
+      "paramTypes": [
+        "Array", 
+        "Array"
+      ], 
+      "paramDescs": [
+        "First matrix.", 
+        "Second matrix."
+      ], 
+      "returnName": "M", 
+      "returnType": "Array", 
+      "returnDesc": "Subtraction of <i>M2</i> from <i>M1</i>.", 
+      "errors": [
+        "the dimensions of <i>M1</i> and <i>M2</i> do not match"
+      ]
+    },
     "trace": {
       "funcName": "trace", 
       "funcDesc": "Calculates the trace of a square matrix, <i>M</i>.", 
@@ -1480,7 +1582,7 @@
       ], 
       "returnName": "M", 
       "returnType": "Array", 
-      "returnDesc": ".", 
+      "returnDesc": "A matrix of zeros.", 
       "errors": [
         "Either matrix dimension is less than 1."
       ]

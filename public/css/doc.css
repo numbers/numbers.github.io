@@ -6,6 +6,10 @@ hr {
   background-color: black;
   border-color: black; }
 
+span.lit {
+  font-family: "monospace";
+  background-color: #e1e1e1; }
+
 #sidebar {
   float: left;
   overflow: hidden; }
