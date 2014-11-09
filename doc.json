@@ -2100,13 +2100,19 @@
       "funcName": "quantile", 
       "funcDesc": "Calculates the <i>k</i>th <i>q</i>-quantile of a set of values, <i>arr</i>.", 
       "paramNames": [
-        "arr"
+        "arr",
+        "k",
+        "q"
       ], 
       "paramTypes": [
-        "Array"
+        "Array",
+        "Number",
+        "Number"
       ], 
       "paramDescs": [
-        "A set of values."
+        "A set of values.",
+        "Index of quantile.",
+        "Number of quantiles."
       ], 
       "returnName": "num", 
       "returnType": "Number", 
