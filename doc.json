@@ -95,7 +95,10 @@
       "returnName": "r", 
       "returnType": "Int", 
       "returnDesc": "Falling factorial of <i>n</i> with <i>k</i> steps. If <span class=\"lit\">k &gt; n</span> then 0 is returned.", 
-      "errors": "This function does not raise any errors."
+      "errors": [
+        "<i>n</i> cannot be negative.",
+        "<i>k</i> cannot be greater than <i>n</i>."
+      ]
     }, 
     "gcd": {
       "funcName": "gcd", 
