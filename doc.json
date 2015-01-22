@@ -262,6 +262,7 @@
       "errors": [
         "<i>n</i> cannot be less than or equal to 0.",
         "<i>k</i> cannot be greater than <i>n</i>."
+      ]
     },
     "powerMod": {
       "funcName": "powerMod", 
