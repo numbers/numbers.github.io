@@ -272,7 +272,7 @@
       "returnName": "num", 
       "returnType": "Int", 
       "returnDesc": "a^b mod m.", 
-      "errors": "This function does not raise any errors (although it should)."
+      "errors": "Inputs must be number."
     }, 
     "product": {
       "funcName": "product", 
