@@ -249,7 +249,7 @@
       "returnName": "bool", 
       "returnType": "Boolean", 
       "returnDesc": "true if they are equal within the precision, false otherwise", 
-      "errors": "This function does not raise any errors."
+      "errors": "<i>a</i> and <i>b</i> should be numbers."
     }, 
     "powerMod": {
       "funcName": "powerMod", 
