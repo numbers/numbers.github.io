@@ -38,7 +38,7 @@
       "returnName": "arr", 
       "returnType": "Array", 
       "returnDesc": "An array whose first element is the divisor (<i>a</i>/<i>b</i>) and second element is the modulus (<i>a</i>%<i>b</i>). Returns false if <i>a</i> or <i>b</i> is not an integer.", 
-      "errors": "This function does not raise any errors (although it should)."
+      "errors": "A or B are not integers."
     }, 
     "egcd": {
       "funcName": "egcd", 
