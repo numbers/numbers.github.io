@@ -62,7 +62,7 @@
       "returnName": "arr", 
       "returnType": "Array", 
       "returnDesc": "An array whose first element is gcd(a,b), second element is x, and third element is y such that ax + by = gcd(a,b) is satisfied.", 
-      "errors": "This function does not raise any errors."
+      "errors": "Can only operate on integers."
     }, 
     "factorial": {
       "funcName": "factorial", 
@@ -79,7 +79,10 @@
       "returnName": "num", 
       "returnType": "Int", 
       "returnDesc": "Factorial of <i>n</i>", 
-      "errors": "This function does not raise any errors."
+      "errors": [
+        "Can only operate on integers.",
+        "Can only operate on positive numbers"
+      ]
     }, 
     "fallingFactorial": {
       "funcName": "fallingFactorial", 
