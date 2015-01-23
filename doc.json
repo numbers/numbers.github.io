@@ -240,7 +240,30 @@
       "returnType": "Boolean", 
       "returnDesc": "true if they are equal within the precision, false otherwise", 
       "errors": "This function does not raise any errors."
-    }, 
+    },
+    "permutation": {
+      "funcName": "permutation",
+      "funcDesc": "Calculate the permutation (n choose k)",
+      "paramNames": [
+        "n",
+        "k"
+      ],
+      "paramTypes": [
+        "Int",
+        "Int"
+      ],
+      "paramDescs": [
+        "Number of total elements",
+        "Fixed number of elements"
+      ],
+      "returnName": "num", 
+      "returnType": "Number", 
+      "returnDesc": "Number of ordered variations", 
+      "errors": [
+        "<i>n</i> cannot be less than or equal to 0.",
+        "<i>k</i> cannot be greater than <i>n</i>."
+      ]
+    },
     "powerMod": {
       "funcName": "powerMod", 
       "funcDesc": "Calculates the modulus of an exponential number, a^b mod m.", 
