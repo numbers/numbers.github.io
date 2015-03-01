@@ -275,7 +275,7 @@
         <hr/>
       </div>
       <div id="quantile" class="api-func">
-        <h4>numbers.statistic.<b>quantile</b>(arr)</h4>
+        <h4>numbers.statistic.<b>quantile</b>(arr, k, q)</h4>
         <p>Calculates the <i>k</i>th <i>q</i>-quantile of a set of values, <i>arr</i>.</p>
         <table>
           <tr>
@@ -283,6 +283,12 @@
             <td>
               <p><b>arr</b> : <i>Array</i><br/>
                 <div class="desc">A set of values.</div>
+              </p>
+              <p><b>k</b> : <i>Number</i><br/>
+                <div class="desc">Index of quantile.</div>
+              </p>
+              <p><b>q</b> : <i>Number</i><br/>
+                <div class="desc">Number of quantiles.</div>
               </p>
             </td>
           </tr>

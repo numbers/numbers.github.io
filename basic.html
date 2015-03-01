@@ -55,6 +55,7 @@
         <li><a href="#min">basic.min</a></li>
         <li><a href="#modInverse">basic.modInverse</a></li>
         <li><a href="#numbersEqual">basic.numbersEqual</a></li>
+        <li><a href="#permutation">basic.permutation</a></li>
         <li><a href="#powerMod">basic.powerMod</a></li>
         <li><a href="#product">basic.product</a></li>
         <li><a href="#random">basic.random</a></li>
@@ -450,6 +451,42 @@
             <th>Errors</th>
             <td>
               <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="permutation" class="api-func">
+        <h4>numbers.basic.<b>permutation</b>(n, k)</h4>
+        <p>Calculate the permutation (n choose k)</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Number of total elements</div>
+              </p>
+              <p><b>k</b> : <i>Int</i><br/>
+                <div class="desc">Fixed number of elements</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">Number of ordered variations</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>n</i> cannot be less than or equal to 0.</li>
+                <li><i>k</i> cannot be greater than <i>n</i>.</li>
+              </ul>
             </td>
           </tr>
         </table>
