@@ -1,0 +1,30 @@
+extends navbar
+
+block title
+  title numbers.js examples
+block cssfile
+  link(type='text/css', rel='stylesheet', href='./css/examples.css')
+block activeTab
+  li
+    a(href='./index.html')
+      | Home 
+      span.glyphicon.glyphicon-home
+  //- li: a(href='#') Download
+  li.active: a(href='./examples.html') Examples
+  li.dropdown
+    a.dropdown-toggle(href='#', data-toggle='dropdown')
+      | Documentation
+      span.caret
+    ul.dropdown-menu(role='menu')
+      li: a(href='./basic.html') basic
+      li: a(href='./calculus.html') calculus
+      li: a(href='./complex.html') complex
+      li: a(href='./dsp.html') dsp
+      li: a(href='./generate.html') generate
+      li: a(href='./matrix.html') matrix
+      li: a(href='./prime.html') prime
+      li: a(href='./random.html') random
+      li: a(href='./statistic.html') statistic
+
+block content
+  p Coming soon!

@@ -5,6 +5,8 @@ documentation for numbers.js. any info about contributing to the repo itself can
 https://github.com/sjkaliski/numbers.js.
 
 ## contributing
+**Note**: if any changes are made, the Jade files must be recompiled. see below for more info.
+
 ### small changes
 if you notice something wrong or that something's missing in the documentation, just alter the doc.json file appropriately.
 
@@ -13,9 +15,16 @@ adding a module (i.e. a new component of numbers.js, e.g. numbers.yourmodule) is
 
 then, the ```views/navbar.jade```, ```views/doc.jade```, and ```views/examples.jade``` files must be edited. just add your module name to the dropdown in each.
 
-the worst part: add your module information into ```doc.json```. use 'yourmodule' as the key and following the exact same structure as the rest of the file, otherwise shit won't work.
+the worst part: add your module information into ```doc.json```. use 'yourmodule' as the key and following the exact same structure as the rest of the file, otherwise shit won't work. that should be it!
 
-lastly, the server file (```server.js```) must be edited to serve your file properly. for the second argument of ```res.render()```, use ```{module: 'yourmodule', data: docData.yourmodule}. that should be it.
+### compiling Jade to HTML
+all you have to do is run
+
+```
+npm run compile
+```
+
+and all of the compilation will be done for you.
 
 ## acknowledgements
 thanks to Jacky Ngai for creating the logo!

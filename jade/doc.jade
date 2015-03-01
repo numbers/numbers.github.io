@@ -43,28 +43,28 @@ mixin post(module, funcName, funcDesc, paramNames, paramTypes, paramDescs, resul
 block title
   title numbers.js documentation
 block cssfile
-  link(type='text/css', rel='stylesheet', href='/css/doc.css')
+  link(type='text/css', rel='stylesheet', href='./css/doc.css')
 block activeTab
   li
-    a(href='/')
+    a(href='./index.html')
       | Home 
       span.glyphicon.glyphicon-home
   //- li: a(href='#') Download
-  li: a(href='/examples') Examples
+  li: a(href='./examples.html') Examples
   li.active.dropdown
     a.dropdown-toggle(href='#', data-toggle='dropdown')
       | Documentation
       span.caret
     ul.dropdown-menu(role='menu')
-      li: a(href='/basic') basic
-      li: a(href='/calculus') calculus
-      li: a(href='/complex') complex
-      li: a(href='/dsp') dsp
-      li: a(href='/generate') generate
-      li: a(href='/matrix') matrix
-      li: a(href='/prime') prime
-      li: a(href='/random') random
-      li: a(href='/statistic') statistic
+      li: a(href='./basic.html') basic
+      li: a(href='./calculus.html') calculus
+      li: a(href='./complex.html') complex
+      li: a(href='./dsp.html') dsp
+      li: a(href='./generate.html') generate
+      li: a(href='./matrix.html') matrix
+      li: a(href='./prime.html') prime
+      li: a(href='./random.html') random
+      li: a(href='./statistic.html') statistic
 
 block content
   span#sidebar

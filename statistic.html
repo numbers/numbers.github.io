@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numbers.js documentation</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/doc.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span></button><a href="#" class="navbar-brand">numbers.js</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="./examples.html">Examples</a></li>
+            <li class="active dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Documentation<span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="./basic.html">basic</a></li>
+                <li><a href="./calculus.html">calculus</a></li>
+                <li><a href="./complex.html">complex</a></li>
+                <li><a href="./dsp.html">dsp</a></li>
+                <li><a href="./generate.html">generate</a></li>
+                <li><a href="./matrix.html">matrix</a></li>
+                <li><a href="./prime.html">prime</a></li>
+                <li><a href="./random.html">random</a></li>
+                <li><a href="./statistic.html">statistic</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/sjkaliski/numbers.js">numbers.js on GitHub</a></li>
+            <li><a href="https://github.com/stdako/numbersdoc">documentation on GitHub</a></li>
+          </ul>
+        </div>
+        <!--.navbar-collapse -->
+      </div>
+      <!--.container-fluid -->
+    </nav><span id="sidebar">
+      <ul>
+        <li><a href="#correlation">statistic.correlation</a></li>
+        <li><a href="#covariance">statistic.covariance</a></li>
+        <li><a href="#exponentialRegression">statistic.exponentialRegression</a></li>
+        <li><a href="#linearRegression">statistic.linearRegression</a></li>
+        <li><a href="#mean">statistic.mean</a></li>
+        <li><a href="#median">statistic.median</a></li>
+        <li><a href="#mode">statistic.mode</a></li>
+        <li><a href="#quantile">statistic.quantile</a></li>
+        <li><a href="#report">statistic.report</a></li>
+        <li><a href="#rSquared">statistic.rSquared</a></li>
+        <li><a href="#standardDev">statistic.standardDev</a></li>
+      </ul></span><span id="api-cont">
+      <h3><strong>numbers.statistic</strong></h3>
+      <div id="correlation" class="api-func">
+        <h4>numbers.statistic.<b>correlation</b>(arr1, arr2)</h4>
+        <p>Calculates the correlation between two sets of values, <i>arr1</i> and <i>arr2</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr1</b> : <i>Array</i><br/>
+                <div class="desc">First set of values.</div>
+              </p>
+              <p><b>arr2</b> : <i>Array</i><br/>
+                <div class="desc">Second set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>cor</b> : <i>Number</i>
+                <div class="desc">The correlation between <i>arr1</i>, <i>arr2</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>arr1</i> and <i>arr2</i> do not have the same number of values</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="covariance" class="api-func">
+        <h4>numbers.statistic.<b>covariance</b>(arr1, arr2)</h4>
+        <p>Calculates the correlation between two sets of values, <i>arr1</i> and <i>arr2</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr1</b> : <i>Array</i><br/>
+                <div class="desc">First set of values.</div>
+              </p>
+              <p><b>arr2</b> : <i>Array</i><br/>
+                <div class="desc">Second set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>covar</b> : <i>Number</i>
+                <div class="desc">The covariance of <i>arr1</i>, <i>arr2</i></div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>arr1</i> and <i>arr2</i> do not have the same number of values</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="exponentialRegression" class="api-func">
+        <h4>numbers.statistic.<b>exponentialRegression</b>(arrY)</h4>
+        <p>Creates a function to calculate the exponential regression of a set of values, <i>arrY</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arrY</b> : <i>Array</i><br/>
+                <div class="desc">A set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>expReg</b> : <i>Function</i>
+                <div class="desc">A function that takes a value or an array of values and calculates the corresponding exponential regression values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="linearRegression" class="api-func">
+        <h4>numbers.statistic.<b>linearRegression</b>(arrX, arrY)</h4>
+        <p>Creates a function to calculate the linear regression of a dataset, corresponding to x-values (<i>arrX</i>) and y-values (<i>arrY</i>).</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arrX</b> : <i>Array</i><br/>
+                <div class="desc">A set of x-values.</div>
+              </p>
+              <p><b>arrY</b> : <i>Array</i><br/>
+                <div class="desc">A set of y-values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>linReg</b> : <i>Function</i>
+                <div class="desc">A function that takes a value or an array of values and calculates the corresponding linear regression values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="mean" class="api-func">
+        <h4>numbers.statistic.<b>mean</b>(arr)</h4>
+        <p>Calculates the mean of a set of values, <i>arr</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">A set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The mean of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="median" class="api-func">
+        <h4>numbers.statistic.<b>median</b>(arr)</h4>
+        <p>Calculates the median of a set of values, <i>arr</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">A set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The median of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="mode" class="api-func">
+        <h4>numbers.statistic.<b>mode</b>(arr)</h4>
+        <p>Calculates the mode of a set of values, <i>arr</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">A set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The mode of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="quantile" class="api-func">
+        <h4>numbers.statistic.<b>quantile</b>(arr)</h4>
+        <p>Calculates the <i>k</i>th <i>q</i>-quantile of a set of values, <i>arr</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">A set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The median of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="report" class="api-func">
+        <h4>numbers.statistic.<b>report</b>(arr)</h4>
+        <p>Creates a set of summary statistics of a set of values, <i>arr</i>. Calculates the mean, first quartile (mode), median, third quartile, and standard deviation.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">A set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>obj</b> : <i>Object</i>
+                <div class="desc">An object containing the mean ('mean'), first quartile ('firstQuartile'), median ('median'), third quartile ('thirdQuartile'), and standard deviation ('standardDev') of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="rSquared" class="api-func">
+        <h4>numbers.statistic.<b>rSquared</b>(source, regression)</h4>
+        <p>Calculates the coefficient of determination of a dataset, <i>source</i>, and a regression line, <i>regression</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>source</b> : <i>Array</i><br/>
+                <div class="desc">Data points.</div>
+              </p>
+              <p><b>regression</b> : <i>Array</i><br/>
+                <div class="desc">Fitted points.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>rSq</b> : <i>Number</i>
+                <div class="desc">The r-squared value of <i>source</i>, <i>regression</i>.<i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="standardDev" class="api-func">
+        <h4>numbers.statistic.<b>standardDev</b>(arr)</h4>
+        <p>Calculates the standard deviation of a set of values, <i>arr</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">A set of values.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>stddev</b> : <i>Number</i>
+                <div class="desc">The standard deviation of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div></span>
+  </body>
+</html>

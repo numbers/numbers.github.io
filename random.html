@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numbers.js documentation</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/doc.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span></button><a href="#" class="navbar-brand">numbers.js</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="./examples.html">Examples</a></li>
+            <li class="active dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Documentation<span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="./basic.html">basic</a></li>
+                <li><a href="./calculus.html">calculus</a></li>
+                <li><a href="./complex.html">complex</a></li>
+                <li><a href="./dsp.html">dsp</a></li>
+                <li><a href="./generate.html">generate</a></li>
+                <li><a href="./matrix.html">matrix</a></li>
+                <li><a href="./prime.html">prime</a></li>
+                <li><a href="./random.html">random</a></li>
+                <li><a href="./statistic.html">statistic</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/sjkaliski/numbers.js">numbers.js on GitHub</a></li>
+            <li><a href="https://github.com/stdako/numbersdoc">documentation on GitHub</a></li>
+          </ul>
+        </div>
+        <!--.navbar-collapse -->
+      </div>
+      <!--.container-fluid -->
+    </nav><span id="sidebar">
+      <ul>
+        <li><a href="#bates">random.bates</a></li>
+        <li><a href="#boxMullerTransform">random.boxMullerTransform</a></li>
+        <li><a href="#distribution.bates">random.distribution.bates</a></li>
+        <li><a href="#distribution.boxMuller">random.distribution.boxMuller</a></li>
+        <li><a href="#distribution.irwinHall">random.distribution.irwinHall</a></li>
+        <li><a href="#distribution.irwinHallNormal">random.distribution.irwinHallNormal</a></li>
+        <li><a href="#distribution.logNormal">random.distribution.logNormal</a></li>
+        <li><a href="#distribution.normal">random.distribution.normal</a></li>
+        <li><a href="#irwinHall">random.irwinHall</a></li>
+        <li><a href="#sample">random.sample</a></li>
+      </ul></span><span id="api-cont">
+      <h3><strong>numbers.random</strong></h3>
+      <div id="bates" class="api-func">
+        <h4>numbers.random.<b>bates</b>(n, b, a)</h4>
+        <p>Generates a random number according to a Bates distribution inside the interval [<i>a</i>,<i>b</i>]. Both arguments are optional.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Number of times to sum.</div>
+              </p>
+              <p><b>b</b> : <i>Number, optional</i><br/>
+                <div class="desc">Right endpoint of interval. Default value is 1.</div>
+              </p>
+              <p><b>a</b> : <i>Number, optional</i><br/>
+                <div class="desc">Left endpoint of the interal. Default value is 0.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">Random number according to a Bates distribution on [<i>a</i>,<i>b</i>].</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="boxMullerTransform" class="api-func">
+        <h4>numbers.random.<b>boxMullerTransform</b>(mu, sigma)</h4>
+        <p>Generates a pair of indepedent pseudo-random numbers from a normal distribution with mean <i>mu</i> and standard deviation <i>sigma</i>. Both arguments are optional.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>mu</b> : <i>Number, optional</i><br/>
+                <div class="desc">Mean. Default value is 1.</div>
+              </p>
+              <p><b>sigma</b> : <i>Number, optional</i><br/>
+                <div class="desc">Standard deviation. Default value is 0.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">A pair of random numbers according to a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="distribution.bates" class="api-func">
+        <h4>numbers.random.<b>distribution.bates</b>(n, b, a)</h4>
+        <p>Creates an array of <i>n</i> random numbers according to an Bates distribution inside the interval [<i>a</i>,<i>b</i>]. <i>a</i> and <i>b</i> are optional arguments.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Amount of random numbers to generate.</div>
+              </p>
+              <p><b>b</b> : <i>Number, optional</i><br/>
+                <div class="desc">Right endpoint of interval. Default value is n.</div>
+              </p>
+              <p><b>a</b> : <i>Number, optional</i><br/>
+                <div class="desc">Left endpoint of interval. Default value is 0.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of <i>n</i> random numbers from a Bates distribution on [<i>a</i>,<i>b</i>].</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="distribution.boxMuller" class="api-func">
+        <h4>numbers.random.<b>distribution.boxMuller</b>(n, mu, sigma, rc)</h4>
+        <p>Creates an array of <i>n</i> random numbers according to the Box-Muller transform with a mean <i>mu</i> and standard deviation <i>sigma</i>. <i>ru</i> determines if the returned value will be in polar coordinates. <i>mu</i>, <i>sigma</i> and <i>rc</i> are optional arguments.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Amount of random numbers to generate.</div>
+              </p>
+              <p><b>mu</b> : <i>Number, optional</i><br/>
+                <div class="desc">Mean. Default value is 1.</div>
+              </p>
+              <p><b>sigma</b> : <i>Number, optional</i><br/>
+                <div class="desc">Standard deviation. Default value is 0.</div>
+              </p>
+              <p><b>rc</b> : <i>Boolean, optional</i><br/>
+                <div class="desc">Determine if returned values should be in polar coordinates (true) or not 
+            (false). Default value is false.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of <i>n</i> random numbers from a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="distribution.irwinHall" class="api-func">
+        <h4>numbers.random.<b>distribution.irwinHall</b>(n, m, sub)</h4>
+        <p>Creates an array of <i>n</i> random numbers according to an Irwin-Hall distribution with a maximum sum value of <i>m</i> and a subtraction value of <i>sub</i>. <i>mu</i> and <i>sub</i> are optional arguments.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Amount of random numbers to generate.</div>
+              </p>
+              <p><b>m</b> : <i>Number, optional</i><br/>
+                <div class="desc">Maximum sum value. Default value is n.</div>
+              </p>
+              <p><b>sub</b> : <i>Number, optional</i><br/>
+                <div class="desc">Number to subtract. Default value is 0.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of <i>n</i> random numbers from a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="distribution.irwinHallNormal" class="api-func">
+        <h4>numbers.random.<b>distribution.irwinHallNormal</b>(n)</h4>
+        <p>Creates an array of <i>n</i> random numbers (approximately) according to a normal distribution with bounds (-6, 6).</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Amount of random numbers to generate.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of <i>n</i> random numbers from a normal distribution with bounds (-6,6).</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="distribution.logNormal" class="api-func">
+        <h4>numbers.random.<b>distribution.logNormal</b>(n, mu, sigma)</h4>
+        <p>Creates an array of <i>n</i> random numbers according to a log-normal distribution with a mean <i>mu</i> and standard deviation <i>sigma</i>. <i>mu</i> and <i>sigma</i> are optional arguments.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Amount of random numbers to generate.</div>
+              </p>
+              <p><b>mu</b> : <i>Number, optional</i><br/>
+                <div class="desc">Mean. Default value is 1.</div>
+              </p>
+              <p><b>sigma</b> : <i>Number, optional</i><br/>
+                <div class="desc">Standard deviation. Default value is 0.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of <i>n</i> random numbers from a log-normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="distribution.normal" class="api-func">
+        <h4>numbers.random.<b>distribution.normal</b>(n, mu, sigma)</h4>
+        <p>Creates an array of <i>n</i> random numbers according to a normal distribution with a mean <i>mu</i> and standard deviation <i>sigma</i>. <i>mu</i> and <i>sigma</i> are optional arguments.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Amount of random numbers to generate.</div>
+              </p>
+              <p><b>mu</b> : <i>Number, optional</i><br/>
+                <div class="desc">Mean. Default value is 1.</div>
+              </p>
+              <p><b>sigma</b> : <i>Number, optional</i><br/>
+                <div class="desc">Standard deviation. Default value is 0.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of <i>n</i> random numbers from a normal distribution with mean <i>mu</i>, standard deviation <i>sigma</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="irwinHall" class="api-func">
+        <h4>numbers.random.<b>irwinHall</b>(n, sub)</h4>
+        <p>Generates a random number according to an Irwin-Hall distribution, given a maximum sum, <i>n</i>, and a number to subtract, <i>sub</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">Maximum sum.</div>
+              </p>
+              <p><b>sub</b> : <i>Number</i><br/>
+                <div class="desc">Number to subtract.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">Random number according to an Irwin-Hall distribution.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="sample" class="api-func">
+        <h4>numbers.random.<b>sample</b>(a, b, n)</h4>
+        <p>Generates an array of <i>n</i> uniformly distributed random numbers inside the interval [<i>a</i>,<i>b</i>].</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">Left endpoint of interval.</div>
+              </p>
+              <p><b>b</b> : <i>Int</i><br/>
+                <div class="desc">Right endpoint of interval.</div>
+              </p>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Amount of random numbers to generate.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of <i>n</i> random numbers inside [<i>a</i>,<i>b</i>].</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div></span>
+  </body>
+</html>

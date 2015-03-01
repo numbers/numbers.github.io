@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numbers.js documentation</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/doc.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span></button><a href="#" class="navbar-brand">numbers.js</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="./examples.html">Examples</a></li>
+            <li class="active dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Documentation<span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="./basic.html">basic</a></li>
+                <li><a href="./calculus.html">calculus</a></li>
+                <li><a href="./complex.html">complex</a></li>
+                <li><a href="./dsp.html">dsp</a></li>
+                <li><a href="./generate.html">generate</a></li>
+                <li><a href="./matrix.html">matrix</a></li>
+                <li><a href="./prime.html">prime</a></li>
+                <li><a href="./random.html">random</a></li>
+                <li><a href="./statistic.html">statistic</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/sjkaliski/numbers.js">numbers.js on GitHub</a></li>
+            <li><a href="https://github.com/stdako/numbersdoc">documentation on GitHub</a></li>
+          </ul>
+        </div>
+        <!--.navbar-collapse -->
+      </div>
+      <!--.container-fluid -->
+    </nav><span id="sidebar">
+      <ul>
+        <li><a href="#add">complex.add</a></li>
+        <li><a href="#complexPow">complex.complexPow</a></li>
+        <li><a href="#conjugate">complex.conjugate</a></li>
+        <li><a href="#cosine">complex.cosine</a></li>
+        <li><a href="#divide">complex.divide</a></li>
+        <li><a href="#equals">complex.equals</a></li>
+        <li><a href="#magnitude">complex.magnitude</a></li>
+        <li><a href="#multiply">complex.multiply</a></li>
+        <li><a href="#phase">complex.phase</a></li>
+        <li><a href="#pow">complex.pow</a></li>
+        <li><a href="#roots">complex.roots</a></li>
+        <li><a href="#sine">complex.sine</a></li>
+        <li><a href="#subtract">complex.subtract</a></li>
+        <li><a href="#tan">complex.tan</a></li>
+      </ul></span><span id="api-cont">
+      <h3><strong>numbers.complex</strong></h3>
+      <div id="add" class="api-func">
+        <h4>numbers.complex.<b>add</b>(z)</h4>
+        <p>Add <i>z</i> to this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i><br/>
+                <div class="desc">A complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>w</b> : <i>Complex</i>
+                <div class="desc">A new complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="complexPow" class="api-func">
+        <h4>numbers.complex.<b>complexPow</b>(z)</h4>
+        <p>Raise this complex number to a complex number, <i>z</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i><br/>
+                <div class="desc">Complex power of this complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>w</b> : <i>Complex</i>
+                <div class="desc">Raised complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="conjugate" class="api-func">
+        <h4>numbers.complex.<b>conjugate</b>()</h4>
+        <p>Calculates the conjugate of this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i>
+                <div class="desc">The conjugate.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="cosine" class="api-func">
+        <h4>numbers.complex.<b>cosine</b>()</h4>
+        <p>Calculates the cosine of this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i>
+                <div class="desc">The cosine.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="divide" class="api-func">
+        <h4>numbers.complex.<b>divide</b>(z)</h4>
+        <p>Divide this complex number by <i>z</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i><br/>
+                <div class="desc">A complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>w</b> : <i>Complex</i>
+                <div class="desc">A new complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="equals" class="api-func">
+        <h4>numbers.complex.<b>equals</b>(z)</h4>
+        <p>Determines if this complex number and another complex number, <i>z</i>, are equal.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i><br/>
+                <div class="desc">A complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>bool</b> : <i>Boolean</i>
+                <div class="desc">true if this complex number and <i>z</i> are equal; false otherwise.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="magnitude" class="api-func">
+        <h4>numbers.complex.<b>magnitude</b>()</h4>
+        <p>Calculates the magnitude of this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The magnitude.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="multiply" class="api-func">
+        <h4>numbers.complex.<b>multiply</b>(z)</h4>
+        <p>Multiply this complex number by <i>z</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i><br/>
+                <div class="desc">A complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>w</b> : <i>Complex</i>
+                <div class="desc">A new complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="phase" class="api-func">
+        <h4>numbers.complex.<b>phase</b>()</h4>
+        <p>Calculates the phase (angle from origin) of this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The phase.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="pow" class="api-func">
+        <h4>numbers.complex.<b>pow</b>(n)</h4>
+        <p>Raise this complex number to the <i>n</i>th power.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">Power of the complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>w</b> : <i>Complex</i>
+                <div class="desc">Raised complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="roots" class="api-func">
+        <h4>numbers.complex.<b>roots</b>(n)</h4>
+        <p>Calculates all of the <i>n</i>th roots of this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">The order of the roots of this complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>roots</b> : <i>Array</i>
+                <div class="desc">The <i>n</i>th roots of this complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="sine" class="api-func">
+        <h4>numbers.complex.<b>sine</b>()</h4>
+        <p>Calculates the sine of this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i>
+                <div class="desc">The sine.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="subtract" class="api-func">
+        <h4>numbers.complex.<b>subtract</b>(z)</h4>
+        <p>Subtract <i>z</i> from this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i><br/>
+                <div class="desc">A complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>w</b> : <i>Complex</i>
+                <div class="desc">A new complex number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="tan" class="api-func">
+        <h4>numbers.complex.<b>tan</b>()</h4>
+        <p>Calculates the tan of this complex number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>z</b> : <i>Complex</i>
+                <div class="desc">The tan.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div></span>
+  </body>
+</html>

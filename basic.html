@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numbers.js documentation</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/doc.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span></button><a href="#" class="navbar-brand">numbers.js</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="./examples.html">Examples</a></li>
+            <li class="active dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Documentation<span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="./basic.html">basic</a></li>
+                <li><a href="./calculus.html">calculus</a></li>
+                <li><a href="./complex.html">complex</a></li>
+                <li><a href="./dsp.html">dsp</a></li>
+                <li><a href="./generate.html">generate</a></li>
+                <li><a href="./matrix.html">matrix</a></li>
+                <li><a href="./prime.html">prime</a></li>
+                <li><a href="./random.html">random</a></li>
+                <li><a href="./statistic.html">statistic</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/sjkaliski/numbers.js">numbers.js on GitHub</a></li>
+            <li><a href="https://github.com/stdako/numbersdoc">documentation on GitHub</a></li>
+          </ul>
+        </div>
+        <!--.navbar-collapse -->
+      </div>
+      <!--.container-fluid -->
+    </nav><span id="sidebar">
+      <ul>
+        <li><a href="#binomial">basic.binomial</a></li>
+        <li><a href="#divMod">basic.divMod</a></li>
+        <li><a href="#egcd">basic.egcd</a></li>
+        <li><a href="#factorial">basic.factorial</a></li>
+        <li><a href="#fallingFactorial">basic.fallingFactorial</a></li>
+        <li><a href="#gcd">basic.gcd</a></li>
+        <li><a href="#isInt">basic.isInt</a></li>
+        <li><a href="#lcm">basic.lcm</a></li>
+        <li><a href="#max">basic.max</a></li>
+        <li><a href="#min">basic.min</a></li>
+        <li><a href="#modInverse">basic.modInverse</a></li>
+        <li><a href="#numbersEqual">basic.numbersEqual</a></li>
+        <li><a href="#powerMod">basic.powerMod</a></li>
+        <li><a href="#product">basic.product</a></li>
+        <li><a href="#random">basic.random</a></li>
+        <li><a href="#range">basic.range</a></li>
+        <li><a href="#shuffle">basic.shuffle</a></li>
+        <li><a href="#square">basic.square</a></li>
+        <li><a href="#subtraction">basic.subtraction</a></li>
+        <li><a href="#sum">basic.sum</a></li>
+      </ul></span><span id="api-cont">
+      <h3><strong>numbers.basic</strong></h3>
+      <div id="binomial" class="api-func">
+        <h4>numbers.basic.<b>binomial</b>(n, k)</h4>
+        <p>Calculates the binomial coefficient of <i>n</i>,<i>k</i> (<i>n</i> choose <i>k</i>).</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">Number of available choices.</div>
+              </p>
+              <p><b>k</b> : <i>Int</i><br/>
+                <div class="desc">Number of choices selected.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Int</i>
+                <div class="desc">The number of combinations of choices, <i>n</i> choose <i>k</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="divMod" class="api-func">
+        <h4>numbers.basic.<b>divMod</b>(a, b)</h4>
+        <p>Calculates the divisor (quotient) and modulus (remainder) amongst two integers <i>a,b</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">First integer.</div>
+              </p>
+              <p><b>b</b> : <i>Int</i><br/>
+                <div class="desc">Second integer.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array whose first element is the divisor (<i>a</i>/<i>b</i>) and second element is the modulus (<i>a</i>%<i>b</i>). Returns false if <i>a</i> or <i>b</i> is not an integer.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="egcd" class="api-func">
+        <h4>numbers.basic.<b>egcd</b>(a, b)</h4>
+        <p>Performs the extended Euclidean algorithm (calculates x,y such that ax + by = gcd(a,b) ).</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">First integer.</div>
+              </p>
+              <p><b>b</b> : <i>Int</i><br/>
+                <div class="desc">Second integer.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array whose first element is gcd(a,b), second element is x, and third element is y such that ax + by = gcd(a,b) is satisfied.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="factorial" class="api-func">
+        <h4>numbers.basic.<b>factorial</b>(n)</h4>
+        <p>Calculates the factorial of a positive integer, <i>n</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">A positive integer.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Int</i>
+                <div class="desc">Factorial of <i>n</i></div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="fallingFactorial" class="api-func">
+        <h4>numbers.basic.<b>fallingFactorial</b>(n, k)</h4>
+        <p>Calculates the falling factorial of a positive integer <i>n</i> with <i>k</i> steps: n!/(n-k)!</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">A positive integer.</div>
+              </p>
+              <p><b>k</b> : <i>Int</i><br/>
+                <div class="desc">The number of steps to fall.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>r</b> : <i>Int</i>
+                <div class="desc">Falling factorial of <i>n</i> with <i>k</i> steps. If <span class="lit">k &gt; n</span> then 0 is returned.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="gcd" class="api-func">
+        <h4>numbers.basic.<b>gcd</b>(a, b)</h4>
+        <p>Calculates the greatest common divisor (gcd) amongst two integers.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">First integer.</div>
+              </p>
+              <p><b>b</b> : <i>Int</i><br/>
+                <div class="desc">Second integer.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Int</i>
+                <div class="desc">The gcd of <i>a,b</i>. If <i>a</i> or <i>b</i> are Infinity or -Infinity, then Infinity is returned. If <i>a</i> or <i>b</i> are not numbers, then NaN is returned.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>a</i> or <i>b</i> is not an integer.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="isInt" class="api-func">
+        <h4>numbers.basic.<b>isInt</b>(n)</h4>
+        <p>Determines if a number is an integer.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">A number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>bool</b> : <i>Boolean</i>
+                <div class="desc">true if <i>n</i> is an integer, false otherwise.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="lcm" class="api-func">
+        <h4>numbers.basic.<b>lcm</b>(a, b)</h4>
+        <p>Calculates the lowest common multiple (lcm) amongst two integers.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">First integer.</div>
+              </p>
+              <p><b>b</b> : <i>Int</i><br/>
+                <div class="desc">Second integer.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Int</i>
+                <div class="desc">The lcm of <i>a,b</i>. If <i>a</i> or <i>b</i> are Infinity or -Infinity, then <span class="lit">0</span> is returned. If <i>a</i> or <i>b</i> are not numbers, then NaN is returned.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>a</i> or <i>b</i> is not an integer.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="max" class="api-func">
+        <h4>numbers.basic.<b>max</b>(arr)</h4>
+        <p>Finds the maximum value in an array.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">An array of numbers.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Int</i>
+                <div class="desc">Maximum value inside <i>arr</i>. -Infinity is returned if <i>arr</i> is empty.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>arr</i> is not an array.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="min" class="api-func">
+        <h4>numbers.basic.<b>min</b>(arr)</h4>
+        <p>Finds the minimum value in an array.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">An array of numbers.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>numfct</b> : <i>Int</i>
+                <div class="desc">Minimum value inside <i>arr</i>. Infinity is returned if <i>arr</i> is empty.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>arr</i> is not an array.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="modInverse" class="api-func">
+        <h4>numbers.basic.<b>modInverse</b>(a, m)</h4>
+        <p>Calculates the modular multiplicative inverse <i>x</i> of an integer <i>a</i> and modulus <i>m</i>, ax = 1 (mod m).</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">An integer.</div>
+              </p>
+              <p><b>m</b> : <i>Int</i><br/>
+                <div class="desc">Modulus.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>x</b> : <i>Int</i>
+                <div class="desc">An integer such that ax = 1 (mod m).</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>x</i> cannot be calculated (i.e. no modular multiplicative inverse exists).</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="numbersEqual" class="api-func">
+        <h4>numbers.basic.<b>numbersEqual</b>(a, b, epsilon)</h4>
+        <p>Determines if two numbers, <i>a,b</i>, are equal within a given margin of precision, <i>epsilon</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Number</i><br/>
+                <div class="desc">First number.</div>
+              </p>
+              <p><b>b</b> : <i>Number</i><br/>
+                <div class="desc">Second number.</div>
+              </p>
+              <p><b>epsilon</b> : <i>Number</i><br/>
+                <div class="desc">Precision.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>bool</b> : <i>Boolean</i>
+                <div class="desc">true if they are equal within the precision, false otherwise</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="powerMod" class="api-func">
+        <h4>numbers.basic.<b>powerMod</b>(a, b, m)</h4>
+        <p>Calculates the modulus of an exponential number, a^b mod m.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">Base.</div>
+              </p>
+              <p><b>b</b> : <i>Int</i><br/>
+                <div class="desc">Exponent.</div>
+              </p>
+              <p><b>m</b> : <i>Int</i><br/>
+                <div class="desc">Modulus.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Int</i>
+                <div class="desc">a^b mod m.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="product" class="api-func">
+        <h4>numbers.basic.<b>product</b>(arr)</h4>
+        <p>Calculates the product of the elements of an array.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">An array of numbers.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The product of the elements of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li>not all elements of <i>arr</i> are numbers</li>
+                <li><i>arr</i> is not an array</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="random" class="api-func">
+        <h4>numbers.basic.<b>random</b>(arr, quant, allowDuplicates)</h4>
+        <p>Retrieves a specified quantity, <i>quant</i> of elements from an array, <i>arr</i> at random. If <i>allowDuplicates</i> is true, then the resulting array is allowed to duplicates of numbers.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">Array of values to pick from.</div>
+              </p>
+              <p><b>quant</b> : <i>Int</i><br/>
+                <div class="desc">Number of values to retrieve.</div>
+              </p>
+              <p><b>allowDuplicates</b> : <i>Boolean</i><br/>
+                <div class="desc">Allow numbers to be returned more than once.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>randomArr</b> : <i>Array</i>
+                <div class="desc">An array of randomly chosen numbers from <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li><i>arr</i> is empty</li>
+                <li><i>quant</i> is greater than the number of elements in <i>arr</i> and <i>allowDuplicates</i> is false</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="range" class="api-func">
+        <h4>numbers.basic.<b>range</b>(start, stop, step)</h4>
+        <p>Creates a range of numbers from <i>start</i> (inclusive) to <i>stop</i> (exclusive), increasing by <i>step</i> each iteration. All arguments optional.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>start</b> : <i>Int</i><br/>
+                <div class="desc">Start of range (included). Default value is 0.</div>
+              </p>
+              <p><b>stop</b> : <i>Int</i><br/>
+                <div class="desc">End of range (excluded). Default value is the value of start.</div>
+              </p>
+              <p><b>step</b> : <i>Int</i><br/>
+                <div class="desc">Increment size. Default value is 1.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of numbers. If no arguments are given, then [0] is returned.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="shuffle" class="api-func">
+        <h4>numbers.basic.<b>shuffle</b>(arr)</h4>
+        <p>Shuffles the elements of an array in place.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">An array.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>shuffledArr</b> : <i>Number</i>
+                <div class="desc">A shuffled version of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="square" class="api-func">
+        <h4>numbers.basic.<b>square</b>(n)</h4>
+        <p>Calculates the square of a number.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">A number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc"><i>n</i> squared.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="subtraction" class="api-func">
+        <h4>numbers.basic.<b>subtraction</b>(arr)</h4>
+        <p>Calculates the differences of elements of an array, using the first element as the starting point.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">An array of numbers.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The difference of the elements of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li>not all elements of <i>arr</i> are numbers</li>
+                <li><i>arr</i> is not an array</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="sum" class="api-func">
+        <h4>numbers.basic.<b>sum</b>(arr)</h4>
+        <p>Calculates the sum of the elements of an array.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i><br/>
+                <div class="desc">An array of numbers.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The sum of the elements of <i>arr</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li>not all elements of <i>arr</i> are numbers</li>
+                <li><i>arr</i> is not an array</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div></span>
+  </body>
+</html>

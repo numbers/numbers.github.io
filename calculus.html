@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numbers.js documentation</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/doc.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span></button><a href="#" class="navbar-brand">numbers.js</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="./examples.html">Examples</a></li>
+            <li class="active dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Documentation<span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="./basic.html">basic</a></li>
+                <li><a href="./calculus.html">calculus</a></li>
+                <li><a href="./complex.html">complex</a></li>
+                <li><a href="./dsp.html">dsp</a></li>
+                <li><a href="./generate.html">generate</a></li>
+                <li><a href="./matrix.html">matrix</a></li>
+                <li><a href="./prime.html">prime</a></li>
+                <li><a href="./random.html">random</a></li>
+                <li><a href="./statistic.html">statistic</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/sjkaliski/numbers.js">numbers.js on GitHub</a></li>
+            <li><a href="https://github.com/stdako/numbersdoc">documentation on GitHub</a></li>
+          </ul>
+        </div>
+        <!--.navbar-collapse -->
+      </div>
+      <!--.container-fluid -->
+    </nav><span id="sidebar">
+      <ul>
+        <li><a href="#adaptiveSimpson">calculus.adaptiveSimpson</a></li>
+        <li><a href="#LanczosGamma">calculus.LanczosGamma</a></li>
+        <li><a href="#limit">calculus.limit</a></li>
+        <li><a href="#MonteCarlo">calculus.MonteCarlo</a></li>
+        <li><a href="#pointDiff">calculus.pointDiff</a></li>
+        <li><a href="#Riemann">calculus.Riemann</a></li>
+        <li><a href="#SimpsonDef">calculus.SimpsonDef</a></li>
+        <li><a href="#SimpsonRecursive">calculus.SimpsonRecursive</a></li>
+        <li><a href="#StirlingGamma">calculus.StirlingGamma</a></li>
+      </ul></span><span id="api-cont">
+      <h3><strong>numbers.calculus</strong></h3>
+      <div id="adaptiveSimpson" class="api-func">
+        <h4>numbers.calculus.<b>adaptiveSimpson</b>(f, a, b, eps)</h4>
+        <p>Simpson's method of approximating the integral of a function, <i>f</i>, on the interval [<i>a</i>,<i>b</i>].</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">The function to be evaluated.</div>
+              </p>
+              <p><b>a</b> : <i>Number</i><br/>
+                <div class="desc">The left endpoint of the interval.</div>
+              </p>
+              <p><b>b</b> : <i>Number</i><br/>
+                <div class="desc">The right endpoint of the interval.</div>
+              </p>
+              <p><b>eps</b> : <i>Number</i><br/>
+                <div class="desc">An error bound.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The approximation of the integral of <i>f</i> on [<i>a</i>,<i>b</i>].</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="LanczosGamma" class="api-func">
+        <h4>numbers.calculus.<b>LanczosGamma</b>(n)</h4>
+        <p>Lanczos' approximation to the gamma function of a number, <i>n</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">A number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">Gamma of <i>n</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="limit" class="api-func">
+        <h4>numbers.calculus.<b>limit</b>(f, x, approach)</h4>
+        <p>Calculates the limit of a function, <i>f</i>, at a point <i>x</i>. The point can be approached from the left, right, or middle (a combination of the left and right).</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">The function to be evaluated.</div>
+              </p>
+              <p><b>x</b> : <i>Number</i><br/>
+                <div class="desc">The point for which the limit will be calculated.</div>
+              </p>
+              <p><b>approach</b> : <i>String</i><br/>
+                <div class="desc">A desired approach. left, right and middle are the possible approaches.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The limit of <i>f</i> at <i>x</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li>an approach is not given</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="MonteCarlo" class="api-func">
+        <h4>numbers.calculus.<b>MonteCarlo</b>(f, N, I)</h4>
+        <p>The Monte-Carlo method for approximating the integral of a singlevariate or multivariate function, <i>f</i>, over a given interval(s). The number of intervals must match the number of variables of the function. The nth element of I is the interval for the nth variable of the function.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">The function to be evaluated.</div>
+              </p>
+              <p><b>N</b> : <i>Number</i><br/>
+                <div class="desc">The number of function evaluations.</div>
+              </p>
+              <p><b>I</b> : <i>Array</i><br/>
+                <div class="desc">An array of arrays, where each inner array is an interval containing 
+            the endpoints.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">An approximation to the integral of <i>f</i> with <i>N</i> function evaluations.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>An error is thrown if:</p>
+              <ul>
+                <li>there are no intervals given (<span class="lit">L.length == 0</span>)</li>
+                <li>N is not positive</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="pointDiff" class="api-func">
+        <h4>numbers.calculus.<b>pointDiff</b>(f, x)</h4>
+        <p>Calculates the point differential of a function <i>f</i> at a point <i>x</i>. Currently only supports one-dimensional functions.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">The function to be evaluated.</div>
+              </p>
+              <p><b>x</b> : <i>Number</i><br/>
+                <div class="desc">The point for which the point differential will be calculated.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The point differential of <i>f</i> at <i>x</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="Riemann" class="api-func">
+        <h4>numbers.calculus.<b>Riemann</b>(f, a, b, n, sampler)</h4>
+        <p>Calculates the Riemann sum for a one-variable function <i>f</i> on the interval [<i>a</i>,<i>b</i>] with <i>n</i> equally-spaced divisons. If <i>sampler</i> is given, that function will be used to calculate which value to sample on each subinterval; otherwise, the left endpoint will be used.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">The function to be evaluated.</div>
+              </p>
+              <p><b>a</b> : <i>Number</i><br/>
+                <div class="desc">The left endpoint of the interval.</div>
+              </p>
+              <p><b>b</b> : <i>Number</i><br/>
+                <div class="desc">The right endpoint of the interval.</div>
+              </p>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">The number of subintervals.</div>
+              </p>
+              <p><b>sampler</b> : <i>Function, optional</i><br/>
+                <div class="desc">A function that determines what value is to be used for sampling 
+            on a subinterval.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The Riemann sum of <i>f</i> on [<i>a</i>,<i>b</i>] with <i>n</i> divisions.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="SimpsonDef" class="api-func">
+        <h4>numbers.calculus.<b>SimpsonDef</b>(f, a, b)</h4>
+        <p>Simpson's method of approximating the integral of a function, <i>f</i>, on the interval [<i>a</i>,<i>b</i>].</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">The function to be evaluated.</div>
+              </p>
+              <p><b>a</b> : <i>Number</i><br/>
+                <div class="desc">The left endpoint of the interval.</div>
+              </p>
+              <p><b>b</b> : <i>Number</i><br/>
+                <div class="desc">The right endpoint of the interval.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">The approximation of the integral of <i>f</i> on [<i>a</i>,<i>b</i>].</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="SimpsonRecursive" class="api-func">
+        <h4>numbers.calculus.<b>SimpsonRecursive</b>(f, a, b, whole, eps)</h4>
+        <p>The helper function used for adaptive Simpson's method of approximating the integral of a function, <i>f</i>, on the interval [<i>a</i>,<i>b</i>].</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">The function to be evaluated.</div>
+              </p>
+              <p><b>a</b> : <i>Number</i><br/>
+                <div class="desc">The left endpoint of the interval.</div>
+              </p>
+              <p><b>b</b> : <i>Number</i><br/>
+                <div class="desc">The right endpoint of the interval.</div>
+              </p>
+              <p><b>whole</b> : <i>Number</i><br/>
+                <div class="desc">The value of the integral of f on [a,b] 
+            (Simpson's approximation, in the caes of adaptiveSimpson).</div>
+              </p>
+              <p><b>eps</b> : <i>Number</i><br/>
+                <div class="desc">An error bound.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">A recursive evaluation of the left and right sides.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="StirlingGamma" class="api-func">
+        <h4>numbers.calculus.<b>StirlingGamma</b>(n)</h4>
+        <p>Striling's approximation to the gamma function of a number, <i>n</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Number</i><br/>
+                <div class="desc">A number.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>num</b> : <i>Number</i>
+                <div class="desc">Gamma of <i>n</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div></span>
+  </body>
+</html>

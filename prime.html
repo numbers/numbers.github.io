@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numbers.js documentation</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/doc.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span></button><a href="#" class="navbar-brand">numbers.js</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="./examples.html">Examples</a></li>
+            <li class="active dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Documentation<span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="./basic.html">basic</a></li>
+                <li><a href="./calculus.html">calculus</a></li>
+                <li><a href="./complex.html">complex</a></li>
+                <li><a href="./dsp.html">dsp</a></li>
+                <li><a href="./generate.html">generate</a></li>
+                <li><a href="./matrix.html">matrix</a></li>
+                <li><a href="./prime.html">prime</a></li>
+                <li><a href="./random.html">random</a></li>
+                <li><a href="./statistic.html">statistic</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/sjkaliski/numbers.js">numbers.js on GitHub</a></li>
+            <li><a href="https://github.com/stdako/numbersdoc">documentation on GitHub</a></li>
+          </ul>
+        </div>
+        <!--.navbar-collapse -->
+      </div>
+      <!--.container-fluid -->
+    </nav><span id="sidebar">
+      <ul>
+        <li><a href="#coprime">prime.coprime</a></li>
+        <li><a href="#factorization">prime.factorization</a></li>
+        <li><a href="#getPerfectPower">prime.getPerfectPower</a></li>
+        <li><a href="#getPrimePower">prime.getPrimePower</a></li>
+        <li><a href="#millerRabin">prime.millerRabin</a></li>
+        <li><a href="#sieve">prime.sieve</a></li>
+        <li><a href="#simple">prime.simple</a></li>
+      </ul></span><span id="api-cont">
+      <h3><strong>numbers.prime</strong></h3>
+      <div id="coprime" class="api-func">
+        <h4>numbers.prime.<b>coprime</b>(a, b)</h4>
+        <p>Determine if two integers are coprime.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>a</b> : <i>Int</i><br/>
+                <div class="desc">First integer.</div>
+              </p>
+              <p><b>b</b> : <i>Int</i><br/>
+                <div class="desc">Second integer</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>bool</b> : <i>Boolean</i>
+                <div class="desc">true if <i>a</i>, <i>b</i> are coprime, false otherwise.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="factorization" class="api-func">
+        <h4>numbers.prime.<b>factorization</b>(n)</h4>
+        <p>Factors an integer, <i>n</i>, into its prime factors and puts them into an array.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">The number to factor.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">The prime factors of <i>n</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="getPerfectPower" class="api-func">
+        <h4>numbers.prime.<b>getPerfectPower</b>(n)</h4>
+        <p>Determines if an integer, <i>n</i>, is a perfect power. It should be noted that this does not find the minimum value of k where m^k = n for some m.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">The number to test.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr/bool</b> : <i>Array/Boolean</i>
+                <div class="desc">Returns <span class="lit">[m,k]</span> if <i>n</i> is a perfect power, returns false otherwise.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="getPrimePower" class="api-func">
+        <h4>numbers.prime.<b>getPrimePower</b>(n)</h4>
+        <p>Determines if an integer, <i>n</i>, is a prime power (n = p^m). The prime and the power are returned if so.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">The number to test.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr/bool</b> : <i>Array/Boolean</i>
+                <div class="desc">Returns <span class="lit">[p,m]</span> if <i>n</i> is a perfect power, returns false otherwise.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="millerRabin" class="api-func">
+        <h4>numbers.prime.<b>millerRabin</b>(n, k)</h4>
+        <p>Determines if an integer, <i>n</i>, is prime in polynomial time using the Miller-Rabin primality test, with an accuracy rate (number of trials) <i>k</i>.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">The number to test for primality.</div>
+              </p>
+              <p><b>k</b> : <i>Int</i><br/>
+                <div class="desc">The accuracy rate.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>bool</b> : <i>Boolean</i>
+                <div class="desc">true if <i>n</i> is prime, false otherwise.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="sieve" class="api-func">
+        <h4>numbers.prime.<b>sieve</b>(n)</h4>
+        <p>Creates an array of prime numbers from 2 to <i>n</i>, inclusive.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">The largest prime number to be returned.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>arr</b> : <i>Array</i>
+                <div class="desc">An array of primes from 2 to <i>n</i>.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="simple" class="api-func">
+        <h4>numbers.prime.<b>simple</b>(n)</h4>
+        <p>Determines if an integer, <i>n</i>, is prime using brute force.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>n</b> : <i>Int</i><br/>
+                <div class="desc">The number to test for primality.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>bool</b> : <i>Boolean</i>
+                <div class="desc">true if <i>n</i> is prime, false otherwise.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div></span>
+  </body>
+</html>
