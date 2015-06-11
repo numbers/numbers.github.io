@@ -1234,6 +1234,26 @@
         "<i>M</i> is not a square matrix."
       ]
     }, 
+    "map": {
+      "funcName": "map",
+      "funcDesc": "Applies a function, <i>f</i>, to every element in the matrix (or vector) <i>M</i>. <i>f</i> can only take one parameter.",
+      "paramNames": [
+        "M",
+        "f"
+      ],
+      "paramTypes": [
+        "Array",
+        "Function"
+      ],
+      "paramDescs": [
+        "A matrix or vector",
+        "A one-parameter function."
+      ],
+      "returnName": "Mmapped",
+      "returnType": "Array",
+      "returnDesc": "A copy of <i>M</i>, but with <i>f</i> applied to each element.",
+      "errors": "This function does not raise any errors."
+    },
     "multiply": {
       "funcName": "multiply", 
       "funcDesc": "Multiply two matrices, <i>M1</i> and <i>M2</i>, together.", 

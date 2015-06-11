@@ -58,6 +58,7 @@
         <li><a href="#isStrictlyColumnDD">matrix.isStrictlyColumnDD</a></li>
         <li><a href="#isStrictlyRowDD">matrix.isStrictlyRowDD</a></li>
         <li><a href="#lupDecomposition">matrix.lupDecomposition</a></li>
+        <li><a href="#map">matrix.map</a></li>
         <li><a href="#multiply">matrix.multiply</a></li>
         <li><a href="#outer">matrix.outer</a></li>
         <li><a href="#reorderCols">matrix.reorderCols</a></li>
@@ -568,6 +569,38 @@
               <ul>
                 <li><i>M</i> is not a square matrix.</li>
               </ul>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+      <div id="map" class="api-func">
+        <h4>numbers.matrix.<b>map</b>(M, f)</h4>
+        <p>Applies a function, <i>f</i>, to every element in the matrix (or vector) <i>M</i>. <i>f</i> can only take one parameter.</p>
+        <table>
+          <tr>
+            <th>Parameters</th>
+            <td>
+              <p><b>M</b> : <i>Array</i><br/>
+                <div class="desc">A matrix or vector</div>
+              </p>
+              <p><b>f</b> : <i>Function</i><br/>
+                <div class="desc">A one-parameter function.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Returns</th>
+            <td>
+              <p><b>Mmapped</b> : <i>Array</i>
+                <div class="desc">A copy of <i>M</i>, but with <i>f</i> applied to each element.</div>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Errors</th>
+            <td>
+              <p>This function does not raise any errors.</p>
             </td>
           </tr>
         </table>
