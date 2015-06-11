@@ -2,10 +2,6 @@ var jade = require('jade'),
     fs   = require('fs'),
     docs = require('./doc');
 
-var compileJade = function() {
-
-};
-
 var writeJadeToHTML = function (jadefile, options) {
     var compiledJade = jade.compileFile('./jade/' + jadefile + '.jade', {pretty: true});
     var html = compiledJade(options);

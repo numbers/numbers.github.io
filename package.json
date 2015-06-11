@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/numbers/numbers.github.io/issues"
   },
-  "homepage": "https://github.com/numbers/numbers.github.io"
+  "homepage": "https://github.com/numbers/numbers.github.io",
+  "dependencies": {
+    "jade": "^1.10.0"
+  }
 }
